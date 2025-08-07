@@ -35,44 +35,15 @@
 
     <link rel="stylesheet" href="css/lib.min.css" media="(min-width: 320px)">
     <link rel="stylesheet" href="css/blog.min.css" media="(min-width: 320px)">
+    <link rel="stylesheet" href="css/blog-details-custom.css" media="(min-width: 320px)">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/blog.min.js"></script>
+    <script defer src="js/blog-details-custom.js"></script>
     <style>
-    /* 전체 배경색 통일 */
-    body,
-    .scroller,
-    #wrap,
-    #wrapper {
-        background-color: #F4F8FC !important;
+    /* 페이지 특정 스타일 오버라이드 */
+    .bd_bg_in {
+        background-position: center center;
     }
-    
-    /* 섹션 배경색 */
-    .bd_desc,
-    .bd_bg,
-    .j_ttl_s,
-    .nav_bd,
-    .trio_itms {
-        background-color: #F4F8FC !important;
-    }
-    
-    /* 스크롤 확대 효과 */
-    .scroll-zoom {
-        height: 500px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .scroll-zoom-in {
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.2s;
-    }
-    
-    /* 반응형 디자인 */
-    @media (max-width: 768px) {
         .full-width-section {
             padding: 40px 0 !important;
         }
@@ -261,8 +232,6 @@
         .banner-description p {
             font-size: 16px !important;
             margin-bottom: 12px !important;
-        }
-    }
     </style>
 </head>
 
@@ -342,74 +311,74 @@
 				</div>
 				
 				<!-- 첫 번째 섹션: 좌측 텍스트, 우측 이미지 - 전체 너비 사용 -->
-				<div class="full-width-section" style="background-color: #F4F8FC; padding: 80px 0;">
-					<div class="wide-container" style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
-						<div class="content-section" style="display: flex; align-items: center; justify-content: center; gap: 80px;">
+				<div class="bd_bg section-padding">
+					<div class="container content-container">
+						<div class="flex-container flex-center">
 							<div class="text-content" style="flex: 0 1 600px;">
-								<div class="section-subtitle" style="color: #999; font-size: 14px; margin-bottom: 15px; letter-spacing: 2px;">ANTI-AGING</div>
-								<h2 style="color: #333; font-size: 42px; font-weight: bold; line-height: 1.2; margin-bottom: 40px;">
+								<div class="section-subtitle">ANTI-AGING</div>
+								<h2 class="section-title">
 									탄력을 잃는다면<br>
 									리프팅이라 할 수 없습니다.
 								</h2>
-								<p style="color: #666; font-size: 18px; line-height: 1.8; margin-bottom: 25px;">
+								<p class="section-text">
 									피부 두께와 노화 정도를 고려한 리프팅으로<br>
 									볼거리 착각 없이 자연스러운 리프팅 효과
 								</p>
-								<p style="color: #666; font-size: 18px; line-height: 1.8;">
+								<p class="section-text" style="margin-bottom: 0;">
 									해부학적 이해를 바탕으로 정확하게 진단하고 풍부함에 시술에<br>
 									안정적이고 효과적인 리프팅 효과를 만나실 수 있습니다.
 								</p>
 							</div>
 							<div class="image-content" style="flex: 0 1 700px;">
-								<img src="img/miso.jpg" alt="안티에이징 리프팅" style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+								<img src="img/miso.jpg" alt="안티에이징 리프팅" class="rounded-image" style="width: 100%; height: auto;">
 							</div>
 						</div>
 					</div>
 				</div>
 				
 				<!-- 두 번째 섹션: 가운데 정렬 텍스트 + 2개 카드 이미지 -->
-				<div class="second-section" style="background-color: #F4F8FC; padding: 100px 0;">
-					<div class="wide-container" style="max-width: 1920px; margin: 0 auto; padding: 0 40px;">
+				<div class="bd_bg section-padding-large">
+					<div class="container content-container-wide">
 						<!-- 상단 텍스트 (가운데 정렬) -->
 						<div class="center-text" style="text-align: center; margin-bottom: 80px;">
-							<h2 style="color: #333; font-size: 36px; font-weight: bold; line-height: 1.3; margin-bottom: 30px;">
+							<h2 class="section-title-medium">
 								연령과 고민에 따라 시술은 달라져야 합니다.
 							</h2>
-							<p style="color: #666; font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
+							<p class="section-text-small">
 								연령과 고민에 따라 시술해야 하는 부위와 리프팅 정도도 달라져야 합니다.
 							</p>
-							<p style="color: #666; font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
+							<p class="section-text-small">
 								또한 연령이 우선이 아닌 피부 나이를 기준으로 개인에게 맞는 시술이 필요합니다.
 							</p>
-							<p style="color: #666; font-size: 16px; line-height: 1.8;">
+							<p class="section-text-small" style="margin-bottom: 0;">
 								연령을 고려하되 개인의 고민과 피부 나이를 정확하게 파악해 시술하는 것이 가장 중요합니다.
 							</p>
 						</div>
 						
 						<!-- 2개 카드 이미지 -->
-						<div class="cards-container" style="display: flex; gap: 60px; justify-content: center;">
-							<div class="age-card" style="flex: 1; max-width: 500px; text-align: center;">
-								<div class="card-image" style="margin-bottom: 30px;">
-									<img src="img/miso.jpg" alt="20대의 리프팅" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+						<div class="card-container">
+							<div class="age-card">
+								<div class="card-image">
+									<img src="img/miso.jpg" alt="20대의 리프팅">
 								</div>
 								<h3 style="color: #333; font-size: 24px; font-weight: bold; margin-bottom: 20px;">20대의 리프팅</h3>
-								<p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 10px;">
+								<p class="section-text-small" style="margin-bottom: 10px;">
 									무조건 지방이 없고 작은 얼굴이 아닌
 								</p>
-								<p style="color: #666; font-size: 16px; line-height: 1.6;">
+								<p class="section-text-small" style="margin-bottom: 0;">
 									피부 조직 밀도와 탄력을 높이는 것에 집중해 직고 리프팅한 얼굴을 만듭니다.
 								</p>
 							</div>
 							
-							<div class="age-card" style="flex: 1; max-width: 500px; text-align: center;">
-								<div class="card-image" style="margin-bottom: 30px;">
-									<img src="img/miso.jpg" alt="50대의 리프팅" style="width: 100%; height: 350px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+							<div class="age-card">
+								<div class="card-image">
+									<img src="img/miso.jpg" alt="50대의 리프팅">
 								</div>
 								<h3 style="color: #333; font-size: 24px; font-weight: bold; margin-bottom: 20px;">50대의 리프팅</h3>
-								<p style="color: #666; font-size: 16px; line-height: 1.6; margin-bottom: 10px;">
+								<p class="section-text-small" style="margin-bottom: 10px;">
 									처지고 깊인 부위를 동시에 개선하는 리프팅, 안티에이징 시술을 진행하여
 								</p>
-								<p style="color: #666; font-size: 16px; line-height: 1.6;">
+								<p class="section-text-small" style="margin-bottom: 0;">
 									조직의 재생을 유도해 건강하고 생기 있는 얼굴을 만듭니다.
 								</p>
 							</div>
@@ -418,31 +387,31 @@
 				</div>
 
 				<!-- 세 번째 섹션: 배너 스타일 (좌측 텍스트 + 우측 그래프/이미지) -->
-				<div class="banner-section" style="background: linear-gradient(135deg, #1e71d0 0%, #bcd8f8 70%); padding: 100px 0; color: white;">
-					<div class="wide-container" style="max-width: 1920px; margin: 0 auto; padding: 0 40px;">
-						<div class="banner-content" style="display: flex; align-items: center; gap: 100px;">
-							<div class="banner-text" style="flex: 1; max-width: 600px;">
-								<div class="banner-subtitle" style="color: #d4af37; font-size: 14px; margin-bottom: 20px; letter-spacing: 2px;">Charm Lifting</div>
-								<h2 style="color: white; font-size: 42px; font-weight: bold; line-height: 1.3; margin-bottom: 40px;">
+				<div class="gradient-banner">
+					<div class="container content-container-wide">
+						<div class="banner-content">
+							<div class="banner-text">
+								<div class="section-subtitle" style="color: #d4af37;">Charm Lifting</div>
+								<h2 class="section-title" style="color: white;">
 									노화 막을 수는 없지만<br>
 									늦출 수는 얼마에 차례 피부에<br>
 									탄력을 거진 부분에 볼륨을 채우다
 								</h2>
-								<p style="color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+								<p class="section-text-small" style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">
 									단순히 리프팅만이 젊음하는 것이 아닌 거진 부분들을 채우고
 								</p>
-								<p style="color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.8; margin-bottom: 30px;">
+								<p class="section-text-small" style="color: rgba(255,255,255,0.8); margin-bottom: 30px;">
 									피부 탄력은 살려 자연스럽고 조화로운 외형을 만드는 데 집중합니다.
 								</p>
-								<p style="color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.8;">
+								<p class="section-text-small" style="color: rgba(255,255,255,0.8); margin-bottom: 0;">
 									참고은이밀은 단기간의 효과가 아닌 시간이 갈수록 빛을 발하는<br>
 									지속 가능한 안티에이징을 추구합니다.
 								</p>
 							</div>
 							
-							<div class="banner-visual" style="flex: 1; max-width: 700px; position: relative;">
+							<div class="banner-visual">
 								<!-- 그래프 또는 이미지 영역 -->
-								<div class="graph-container" style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 40px; backdrop-filter: blur(10px);">
+								<div class="graph-container">
 									<svg viewBox="0 0 400 300" style="width: 100%; height: auto;">
 										<!-- 배경 격자 -->
 										<defs>
@@ -484,77 +453,77 @@
 				</div>
 
 				<!-- 네 번째 섹션: 시술단계 테이블 -->
-				<div class="procedure-section" style="background-color: #F4F8FC; padding: 100px 0;">
-					<div class="wide-container" style="max-width: 1920px; margin: 0 auto; padding: 0 40px;">
+				<div class="bd_bg section-padding-large">
+					<div class="container content-container-wide">
 						<!-- 제목 -->
-						<div class="procedure-header" style="margin-bottom: 80px;">
-							<div style="color: #999; font-size: 14px; margin-bottom: 15px; letter-spacing: 2px;">Clinical Steps</div>
-							<h2 style="color: #333; font-size: 36px; font-weight: bold; line-height: 1.3;">시술단계</h2>
-							<p style="color: #666; font-size: 16px; line-height: 1.8; margin-top: 20px;">
+						<div class="procedure-header" style="margin-bottom: 80px; text-align: center;">
+							<div class="section-subtitle">Clinical Steps</div>
+							<h2 class="section-title-medium">시술단계</h2>
+							<p class="section-text-small" style="margin-top: 20px;">
 								미소핀의원은 철저한<br>
 								미소핀의원은 과정에서 나타납니다.
 							</p>
 						</div>
 						
 						<!-- 시술단계 그리드 -->
-						<div class="procedure-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 80px 60px; max-width: 1200px; margin: 0 auto;">
+						<div class="procedure-grid">
 							
 							<!-- STEP 01: 1:1상담 -->
-							<div class="procedure-step" style="text-align: center;">
-								<div class="step-image" style="margin-bottom: 30px; position: relative;">
-									<img src="img/miso.jpg" alt="1:1상담" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-									<div class="step-badge" style="position: absolute; top: -10px; right: 10px; background: #d4af37; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: bold;">STEP 01</div>
+							<div class="procedure-step">
+								<div class="step-image">
+									<img src="img/miso.jpg" alt="1:1상담" class="circle-image">
+									<div class="step-badge">STEP 01</div>
 								</div>
 								<h3 style="color: #333; font-size: 20px; font-weight: bold; margin-bottom: 15px;">1:1상담</h3>
-								<p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 8px;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 8px;">
 									고객의 이야기를 먼저 들고 현재 상태를 정확하게 파악합니다.
 								</p>
-								<p style="color: #666; font-size: 14px; line-height: 1.6;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 0;">
 									개인 기능과 부분을 우려사항 안전성까지 상세하게 설명합니다.
 								</p>
 							</div>
 
 							<!-- STEP 02: 물맞춤 및 진찰 -->
-							<div class="procedure-step" style="text-align: center;">
-								<div class="step-image" style="margin-bottom: 30px; position: relative;">
-									<img src="img/miso.jpg" alt="물맞춤 및 진찰" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-									<div class="step-badge" style="position: absolute; top: -10px; right: 10px; background: #d4af37; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: bold;">STEP 02</div>
+							<div class="procedure-step">
+								<div class="step-image">
+									<img src="img/miso.jpg" alt="물맞춤 및 진찰" class="circle-image">
+									<div class="step-badge">STEP 02</div>
 								</div>
 								<h3 style="color: #333; font-size: 20px; font-weight: bold; margin-bottom: 15px;">물맞춤 및 진찰</h3>
-								<p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 8px;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 8px;">
 									다양 효과적인 시술 활동
 								</p>
-								<p style="color: #666; font-size: 14px; line-height: 1.6;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 0;">
 									물맞춤 및 전문시료 시열합니다.
 								</p>
 							</div>
 
 							<!-- STEP 03: 시술 -->
-							<div class="procedure-step" style="text-align: center;">
-								<div class="step-image" style="margin-bottom: 30px; position: relative;">
-									<img src="img/miso.jpg" alt="시술" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-									<div class="step-badge" style="position: absolute; top: -10px; right: 10px; background: #d4af37; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: bold;">STEP 03</div>
+							<div class="procedure-step">
+								<div class="step-image">
+									<img src="img/miso.jpg" alt="시술" class="circle-image">
+									<div class="step-badge">STEP 03</div>
 								</div>
 								<h3 style="color: #333; font-size: 20px; font-weight: bold; margin-bottom: 15px;">시술</h3>
-								<p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 8px;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 8px;">
 									엄격의 결과, 지혜의 분석 미술, 근원, 추원까지 파악해
 								</p>
-								<p style="color: #666; font-size: 14px; line-height: 1.6;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 0;">
 									착용한 정리와 시술을 정확하게 안정적으로 시행합니다.
 								</p>
 							</div>
 
 							<!-- STEP 04: 시술 후 관리 -->
-							<div class="procedure-step" style="text-align: center;">
-								<div class="step-image" style="margin-bottom: 30px; position: relative;">
-									<img src="img/miso.jpg" alt="시술 후 관리" style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-									<div class="step-badge" style="position: absolute; top: -10px; right: 10px; background: #d4af37; color: white; padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: bold;">STEP 04</div>
+							<div class="procedure-step">
+								<div class="step-image">
+									<img src="img/miso.jpg" alt="시술 후 관리" class="circle-image">
+									<div class="step-badge">STEP 04</div>
 								</div>
 								<h3 style="color: #333; font-size: 20px; font-weight: bold; margin-bottom: 15px;">시술 후 관리</h3>
-								<p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 8px;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 8px;">
 									품질, 안전관리로 시행한
 								</p>
-								<p style="color: #666; font-size: 14px; line-height: 1.6;">
+								<p class="section-text-small" style="color: #666; font-size: 14px; margin-bottom: 0;">
 									시술 후 무리시료를 시열합니다.
 								</p>
 							</div>
@@ -564,21 +533,21 @@
 				</div>
 
 				<!-- 다섯 번째 섹션: 배경 이미지가 있는 배너 -->
-				<div class="image-banner-section" style="background-image: url('img/miso.jpg'); background-size: cover; background-position: center; padding: 120px 0; position: relative;">
+				<div class="image-banner" style="background-image: url('img/miso.jpg');">
 					<!-- 오버레이 -->
-					<div class="banner-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.3);"></div>
+					<div class="banner-overlay"></div>
 					
-					<div class="wide-container" style="max-width: 1920px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 2;">
-						<div class="banner-text-center" style="text-align: center; color: white;">
-							<div class="banner-subtitle" style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 20px; letter-spacing: 2px;">Change Once Definition of Age</div>
-							<h2 style="color: white; font-size: 48px; font-weight: bold; line-height: 1.3; margin-bottom: 30px;">
+					<div class="container content-container-wide" style="position: relative; z-index: 2;">
+						<div class="banner-text-center">
+							<div class="section-subtitle" style="color: rgba(255,255,255,0.8);">Change Once Definition of Age</div>
+							<h2 class="section-title" style="color: white; font-size: 48px;">
 								동안의 정의를 바꾸다
 							</h2>
 							<div class="banner-description" style="margin-top: 40px;">
-								<p style="color: rgba(255,255,255,0.9); font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
+								<p class="section-text" style="color: rgba(255,255,255,0.9); margin-bottom: 15px;">
 									참된 얼굴로 자꾸 찾는 당신
 								</p>
-								<p style="color: rgba(255,255,255,0.9); font-size: 18px; line-height: 1.8;">
+								<p class="section-text" style="color: rgba(255,255,255,0.9); margin-bottom: 0;">
 									아름 처가를 원하여 당신이라는 좋을 미소핀.
 								</p>
 							</div>
