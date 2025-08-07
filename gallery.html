@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
-    <title>Magical SPA Salon</title>
+    <title>미소핀의원 : The best luxury CLINIC</title>
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Black.woff2">
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Bold.woff2">
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Book.woff2">
@@ -21,6 +21,7 @@
     <link rel="preload" href="js/gallery.min.js" as="script"> 
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -30,13 +31,54 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="description" content="Magical SPA Salon">
-    <meta name="keywords" content="Magical SPA Salon">
+    <meta name="description" content="미소핀의원 : The best luxury CLINIC">
+    <meta name="keywords" content="미소핀의원 : The best luxury CLINIC">
 
     <link rel="stylesheet" href="css/lib.min.css" media="(min-width: 320px)">
     <link rel="stylesheet" href="css/gallery.min.css" media="(min-width: 320px)">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/gallery.min.js"></script>
+    <style>
+    /* 전체 배경색 변경 */
+    body {
+        background-color: #F4F8FC !important;
+    }
+    
+    .gallery_ovr {
+        background-color: #F4F8FC !important;
+    }
+    
+    #gallery_ovr1 {
+        background-color: #F4F8FC !important;
+    }
+    
+    #gallery_ovr2 {
+        background-color: #F4F8FC !important;
+    }
+    
+    .j_ttl {
+        background-color: #F4F8FC !important;
+    }
+    
+    #draggable_ovr {
+        background-color: #F4F8FC !important;
+        margin-top: 100px !important;  /* 이미지 영역을 아래로 내림 */
+        padding-top: 50px !important;
+    }
+    
+    /* 타이틀과 이미지 사이 간격 추가 */
+    .j_ttl {
+        padding-bottom: 50px !important;
+    }
+    
+    /* 전체 갤러리 영역 중앙 정렬 */
+    .draggable_in {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        min-height: 60vh !important;
+    }
+    </style>
 </head>
 
 <body>
@@ -49,20 +91,20 @@
 							<div class="rows">
 								<div class="cols cols01">
 									<div class="logo">
-										<a href="index.html"><img src="img/logo_b.svg" width="98" height="16" alt="" title=""></a>
+										<a href="index.html"><img src="img/logo.svg" width="98" height="16" alt="" title=""></a>
 									</div>
 									
 								</div>
 								<div class="cols cols02">
 									<div class="main_menu">
 										<ul class="menu_list">
-											<li><a href="about.html">About</a></li>
-											<li><a href="services.html">Treatments</a></li>
-											<li><a href="masters.html">Therapists</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="faq.html">FAQ</a></li>
-											<li><a href="contacts.html">Contacts</a></li>
+											<li><a href="about.html">미소핀</a></li>
+											<!-- <li><a href="services.html">시술안내</a></li> -->
+											<li><a href="blog.html">이벤트/공지사항</a></li>
+											<li><a href="gallery.html">시술사진</a></li>
+                                            <!-- <li><a href="masters.html">의료진 소개</a></li> -->
+                                            <li><a href="#">자주 묻는 질문</a></li>
+											<li><a href="#">예약 페이지</a></li>
 										</ul>
 									</div>
 								</div>
@@ -74,11 +116,11 @@
 								</div> -->
 								<div class="cols cols04">
 									<div class="book_a_treatment">
-										<a href="gallery.html#e_win" class="e_win_lnk bat_lnk">book a treatment</a>
+										<a href="gallery.html#e_win" class="e_win_lnk bat_lnk">시술예약하기</a>
 									</div>
 									<div class="card">
 										<a href="gift-card.html" class="card_lnk">
-											<span class="t">Card</span>
+											<span class="t">카드</span>
 											<span class="c"></span>
 										</a>
 									</div>
@@ -100,7 +142,7 @@
 				<div class="gallery_ovr">
 					<div class="j_ttl">
 						<div class="container">
-							<div class="h2 t_split">gallery</div>
+							<div class="h2 t_split">Misopin gallery</div>
 						</div>
 					</div> 
 
@@ -109,63 +151,63 @@
 							<div class="rows_dr">
 								<div class="cursor"></div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt1b.jpg">
-										<img src="img/cnt1.jpg" width="500" height="590" alt="">
+									<a class="fap" href="img/g_DSC08168.jpg">
+										<img src="img/g_DSC08168.jpg" width="500" height="590" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt2b.jpg">
-										<img src="img/cnt2.jpg" width="485" height="526" alt="">
+									<a class="fap" href="img/g_DSC08170.jpg">
+										<img src="img/g_DSC08170.jpg" width="485" height="526" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt3b.jpg">
-										<img src="img/cnt3.jpg" width="501" height="342" alt="">
+									<a class="fap" href="img/g_DSC08175.jpg">
+										<img src="img/g_DSC08175.jpg" width="501" height="342" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt4b.jpg">
-										<img src="img/cnt4.jpg" width="501" height="590" alt="">
+									<a class="fap" href="img/g_DSC08181.jpg">
+										<img src="img/g_DSC08181.jpg" width="501" height="590" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt5b.jpg">
-										<img src="img/cnt5.jpg" width="501" height="342" alt="">
+									<a class="fap" href="img/g_DSC08195.jpg">
+										<img src="img/g_DSC08195.jpg" width="501" height="342" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt6b.jpg">
-										<img src="img/cnt6.jpg" width="485" height="526" alt="">
+									<a class="fap" href="img/g_DSC08208.jpg">
+										<img src="img/g_DSC08208.jpg" width="485" height="526" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt7b.jpg">
-										<img src="img/cnt7.jpg" width="501" height="590" alt="">
+									<a class="fap" href="img/g_DSC08211.jpg">
+										<img src="img/g_DSC08211.jpg" width="501" height="590" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt8b.jpg">
-										<img src="img/cnt8.jpg" width="485" height="526" alt="">
+									<a class="fap" href="img/g_DSC08179.jpg">
+										<img src="img/g_DSC08179.jpg" width="485" height="526" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt9b.jpg">
-										<img src="img/cnt9.jpg" width="501" height="342" alt="">
+									<a class="fap" href="img/g_DSC08224.jpg">
+										<img src="img/g_DSC08224.jpg" width="501" height="342" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt10b.jpg">
-										<img src="img/cnt10.jpg" width="501" height="590" alt="">
+									<a class="fap" href="img/g_DSC08219.jpg">
+										<img src="img/g_DSC08219.jpg" width="501" height="590" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt11b.jpg">
-										<img src="img/cnt11.jpg" width="501" height="342" alt="">
+									<a class="fap" href="img/g_DSC08229.jpg">
+										<img src="img/g_DSC08229.jpg" width="501" height="342" alt="">
 									</a>
 								</div>
 								<div class="cols_dr">
-									<a class="fap" href="img/cnt12b.jpg">
-										<img src="img/cnt12.jpg" width="485" height="526" alt="">
+									<a class="fap" href="img/g_DSC08197.jpg">
+										<img src="img/g_DSC08197.jpg" width="485" height="526" alt="">
 									</a>
 								</div>
 							</div>
@@ -180,7 +222,7 @@
 	</div>
 	<div class="left_menu lef_menu_w" style="opacity: 0">
 	    <div class="left_menu_in">
-	        <img src="img/logo_b.svg" alt="" width="99" height="16" class="lf_logo">
+	        <img src="img/logo.svg" alt="" width="99" height="16" class="lf_logo">
 	        <div class="left_close_m"></div> 
 	        <div class="desc">
 	            <ul class="l_nav">
@@ -189,8 +231,8 @@
 	                <li><a href="masters.html">Therapists</a></li>
 	                <li><a href="gallery.html">Gallery</a></li>
 	                <li><a href="blog.html">Blog</a></li>
-	                <li><a href="faq.html">FAQ</a></li>
-	                <li><a href="contacts.html">Contacts</a></li>
+	                <li><a href="#">FAQ</a></li>
+	                <li><a href="#">Contacts</a></li>
 	            </ul>
 	            <div class="desc_btm">
 	                <!-- <div class="book_a_treatment">
@@ -198,7 +240,7 @@
 	                </div> -->
 	                <div class="card">
 	                    <a href="gift-card.html" class="card_lnk">
-	                        <span class="t">Card</span>
+	                        <span class="t">카드</span>
 	                        <span class="c"></span>
 	                    </a>
 	                </div>

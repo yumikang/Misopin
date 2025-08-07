@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
-    <title>Magical SPA Salon</title>
+    <title>미소핀의원 - 블로그</title>
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Black.woff2">
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Bold.woff2">
     <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Book.woff2">
@@ -21,6 +21,7 @@
     <link rel="preload" href="js/blog.min.js" as="script"> 
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -30,13 +31,162 @@
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="description" content="Magical SPA Salon">
-    <meta name="keywords" content="Magical SPA Salon">
+    <meta name="description" content="미소핀의원 - 이벤트와 공지사항">
+    <meta name="keywords" content="미소핀의원, 피부과, 성형외과, 이벤트, 공지사항">
 
     <link rel="stylesheet" href="css/lib.min.css" media="(min-width: 320px)">
     <link rel="stylesheet" href="css/blog.min.css" media="(min-width: 320px)">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/blog.min.js"></script>
+    <style>
+    /* 전체 배경색 변경 */
+    body {
+        background-color: #F4F8FC !important;
+    }
+    
+    .blog_ovr {
+        background-color: #F4F8FC !important;
+    }
+    
+    .j_ttl {
+        background-color: #F4F8FC !important;
+    }
+    
+    #footer {
+        background-color: #F4F8FC !important;
+    }
+    
+    .footer_light {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 최신 소식과 특별 이벤트 영역 배경색 */
+    .cp_rows {
+        background-color: #F4F8FC !important;
+    }
+    
+    .cp_cols {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 전체 컨테이너 배경색 */
+    .container {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* rows 영역 배경색 */
+    .rows_ovr {
+        background-color: #F4F8FC !important;
+    }
+    
+    .rows {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 더보기 버튼 영역 배경색 */
+    .load_more {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 전체 wrap 영역 배경색 */
+    #wrap {
+        background-color: #F4F8FC !important;
+    }
+    
+    #wrapper {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 스크롤러 영역 배경색 */
+    .scroller {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 공지사항 페이지 레이아웃 - 심플하고 깔끔하게 */
+    
+    /* 전체 블로그 영역 여백 설정 */
+    .blog_ovr {
+        padding: 40px 60px !important;  /* 전체 영역에 좌우 여백 추가 */
+    }
+    
+    /* 타이틀 영역 */
+    .j_ttl {
+        padding: 40px 60px 30px !important;  /* 타이틀 영역 여백 */
+    }
+    
+    .j_ttl .h2 {
+        font-size: 1.8rem !important;
+        font-weight: 600 !important;
+    }
+    
+    /* 최신 소식과 특별 이벤트 영역 숨기기 또는 간소화 */
+    .cp_rows {
+        display: none !important;  /* 또는 필요시 표시 */
+    }
+    
+    /* 게시글 목록 영역 */
+    .rows_ovr {
+        padding: 0 !important;
+    }
+    
+    /* 각 게시글 행 */
+    .rows {
+        display: flex !important;
+        align-items: center !important;
+        padding: 25px 0 !important;
+        border-bottom: 1px solid #e5e5e5 !important;
+    }
+    
+    /* 날짜 영역 */
+    .cols.cols01 {
+        flex: 0 0 150px !important;
+    }
+    
+    .dts .d {
+        font-size: 0.95rem !important;
+        color: #888 !important;
+        font-weight: 400 !important;
+    }
+    
+    /* 이미지 영역 숨기기 */
+    .cols.cols02 {
+        display: none !important;
+    }
+    
+    /* 제목과 내용 영역 */
+    .cols.cols03 {
+        flex: 1 !important;
+        padding-left: 20px !important;
+    }
+    
+    .cols.cols03 .h3 {
+        font-size: 1.2rem !important;
+        font-weight: 500 !important;
+        color: #333 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    /* 자세히 보기 */
+    .desc_btm .rm {
+        font-size: 0.85rem !important;
+        color: #888 !important;
+        text-decoration: underline !important;
+    }
+    
+    /* 더보기 버튼 영역 */
+    .load_more {
+        padding: 40px 60px !important;
+        text-align: center !important;
+    }
+    
+    .load_more_btn {
+        padding: 10px 30px !important;
+        font-size: 0.95rem !important;
+        border: 1px solid #ddd !important;
+        background: white !important;
+        color: #666 !important;
+    }
+    </style>
 </head>
 
 <body>
@@ -49,20 +199,20 @@
 							<div class="rows">
 								<div class="cols cols01">
 									<div class="logo">
-										<a href="index.html"><img src="img/logo_b.svg" width="98" height="16" alt="" title=""></a>
+										<a href="index.html"><img src="img/logo.svg" width="98" height="16" alt="" title=""></a>
 									</div>
 									
 								</div>
 								<div class="cols cols02">
 									<div class="main_menu">
 										<ul class="menu_list">
-											<li><a href="about.html">About</a></li>
-											<li><a href="services.html">Treatments</a></li>
-											<li><a href="masters.html">Therapists</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="faq.html">FAQ</a></li>
-											<li><a href="contacts.html">Contacts</a></li>
+											<li><a href="about.html">미소핀</a></li>
+											<!-- <li><a href="services.html">시술안내</a></li> -->
+											<li><a href="blog.html">이벤트/공지사항</a></li>
+											<li><a href="gallery.html">시술사진</a></li>
+                                            <!-- <li><a href="masters.html">의료진 소개</a></li> -->
+                                            <li><a href="#">자주 묻는 질문</a></li>
+											<li><a href="#">예약 페이지</a></li>
 										</ul>
 									</div>
 								</div>
@@ -74,11 +224,11 @@
 								</div> -->
 								<div class="cols cols04">
 									<div class="book_a_treatment">
-										<a href="blog.html#e_win" class="e_win_lnk bat_lnk">book a treatment</a>
+										<a href="blog.html#e_win" class="e_win_lnk bat_lnk">상담예약</a>
 									</div>
 									<div class="card">
 										<a href="gift-card.html" class="card_lnk">
-											<span class="t">Card</span>
+											<span class="t">카드</span>
 											<span class="c"></span>
 										</a>
 									</div>
@@ -97,7 +247,7 @@
 
 				<div class="j_ttl">
 					<div class="container">
-						<div class="h2">Blog</div>
+						<div class="h2">이벤트/공지사항</div>
 					</div>
 				</div> 
 
@@ -105,21 +255,14 @@
 					<div class="container">
 						<div class="cp_rows">
 							<div class="cp_cols cp_cols01">
-								<p>learn about</p>
-								<p>profitable offers</p>
+								<p>최신 소식과</p>
+								<p>특별 이벤트</p>
 							</div>
 							<div class="cp_cols cp_cols02">
 								<div class="cp_r">
-									<p class="t">Sort By</p>
+									<p class="t">정렬</p>
 									<div class="f_rows">
-										<div class="f_cols f_cols01">
-											<button class="f_btn active">all</button>
-										</div>
-										<div class="f_cols f_cols02">
-											<button class="f_btn">news</button>
-										</div>
-										<div class="f_cols f_cols03">
-											<button class="f_btn">SALE</button>
+										
 										</div>
 									</div>										
 								</div>
@@ -129,23 +272,20 @@
 							<div class="rows">
 								<div class="cols cols01">
 									<div class="dts">
-										<p class="d">16/12/2022</p>
+										<p class="d">16/12/2025</p>
 									</div>
 								</div>
 								<div class="cols cols02">
-									<div class="po_img">
-										<div class="po_img_in" style="background-image: url(img/n2.png);"></div>
-										<img src="img/n2.png" width="468" height="320" alt="" class="m_hd">
-									</div>
+									
 								</div>
 								<div class="cols cols03">
 									<div class="desc">
 										<a href="blog-details-1.html" class="h3">
-											Romantic Couples Packages
+											2월 커플 패키지 이벤트
 										</a>
 										<div class="desc_btm">
-											<div class="dbl"><a href="blog-details-1.html" class="rm">read more</a></div>
-											<div class="dbr"><a href="services.html" class="news_lnk">news</a></div>
+											<div class="dbl"><a href="blog-details-1.html" class="rm">자세히 보기</a></div>
+											
 										</div>
 									</div>
 								</div>
@@ -153,21 +293,18 @@
 							<div class="rows">
 								<div class="cols cols01">
 									<div class="dts">
-										<p class="d">13/12/2022</p>
+										<p class="d">13/12/2025</p>
 									</div>
 								</div>
 								<div class="cols cols02">
-									<div class="po_img">
-										<div class="po_img_in" style="background-image: url(img/n1.png);"></div>
-										<img src="img/n1.png" width="468" height="320" alt="" class="m_hd">
-									</div>
+									
 								</div>
 								<div class="cols cols03">
 									<div class="desc">
-										<a href="blog-details-2.html" class="h3">Phytomer Treatments – beauty by the sea</a>
+										<a href="blog-details-2.html" class="h3">신규 리프팅 시술 도입 안내</a>
 										<div class="desc_btm">
-											<div class="dbl"><a href="blog-details-2.html" class="rm">read more</a></div>
-											<div class="dbr"><a href="services.html" class="news_lnk">news</a></div>
+											<div class="dbl"><a href="blog-details-2.html" class="rm">자세히 보기</a></div>
+											
 										</div>
 									</div>
 								</div>
@@ -175,21 +312,18 @@
 							<div class="rows">
 								<div class="cols cols01">
 									<div class="dts">
-										<p class="d">12/12/2022</p>
+										<p class="d">12/12/2025</p>
 									</div>
 								</div>
 								<div class="cols cols02">
-									<div class="po_img">
-										<div class="po_img_in" style="background-image: url(img/n5.png);"></div>
-										<img src="img/n5.png" width="468" height="320" alt="" class="m_hd">
-									</div>
+								
 								</div>
 								<div class="cols cols03">
 									<div class="desc">
-										<a href="blog-details-3.html" class="h3">Exotic Cocktail – New Seasonal Treatment</a>
+										<a href="blog-details-3.html" class="h3">겨울철 특별 관리 프로그램</a>
 										<div class="desc_btm">
-											<div class="dbl"><a href="blog-details-3.html" class="rm">read more</a></div>
-											<div class="dbr"><a href="services.html" class="news_lnk">news</a></div>
+											<div class="dbl"><a href="blog-details-3.html" class="rm">자세히 보기</a></div>
+											
 										</div>
 									</div>
 								</div>
@@ -197,7 +331,7 @@
 
 							<div class="load_more">
 								<div class="container">
-									<button class="load_more_btn" style="pointer-events: none;">load more <span class="a"></span></button>
+									<button class="load_more_btn" style="pointer-events: none;">더 보기 <span class="a"></span></button>
 								</div>
 							</div>
 						</div>
@@ -208,22 +342,16 @@
 		</div>
 		<div id="footer" class="footer_light">
 		    <div class="container">
-		        <div class="f_map">
-		            <a href="https://www.google.com/maps?f=d&saddr&daddr=51.5168216,-0.1373326&ie=UTF8&0&om=0&output=kml" target="_blank"><img src="img/pn1.png" width="133" height="83" alt="" title=""></a>
-		        </div>
-		        <div class="f_rows">
-		            <div class="cols cols01">
-		                <p>all rights reserved</p>
-		                <p>© <span class="cpr"></span></p>
+		        <div class="business_info" style="text-align: center; padding: 20px 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
+		            <div class="business_links" style="margin-bottom: 15px;">
+		                <a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">비급여항목안내</a> |
+		                <a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">개인정보취급방침</a> |
+		                <a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">이용약관</a> |
+		                <a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">관리자</a>
 		            </div>
-		            <div class="cols cols02">
-		                <p>contact us</p>
-		                <p>25 northumberland avenue, london wc2n 5ap</p>
-		            </div>
-		            <div class="cols cols03">
-		                <p class="phn"><a href="tel:02078397990">020 7839 7990</a></p>
-		                <p class="eml"><a href="https://www.liqium.com/" target="_blank">Design by Liqium</a></p>
-		            </div>
+		            <p style="color: #666; font-size: 13px; margin: 5px 0;">상호 : 미소핀의원　|　대표자 : ㅁㅁㅁ　사업자등록번호 : 123-56-789　|　전화번호 : 02–123-7890</p>
+		            <p style="color: #666; font-size: 13px; margin: 5px 0;">주소 : 서울특별시 강남구 테헤란로 미소핀의원</p>
+		            <p style="color: #666; font-size: 13px; margin: 5px 0;">© 2025 미소핀의원. ALL RIGHTS RESERVED.</p>
 		        </div>
 		    </div>
 		</div>
@@ -231,17 +359,17 @@
 	</div>
 	<div class="left_menu lef_menu_w" style="opacity: 0">
 	    <div class="left_menu_in">
-	        <img src="img/logo_b.svg" alt="" width="99" height="16" class="lf_logo">
+	        <img src="img/logo.svg" alt="" width="99" height="16" class="lf_logo">
 	        <div class="left_close_m"></div> 
 	        <div class="desc">
 	            <ul class="l_nav">
-	                <li><a href="about.html">About</a></li>
-	                <li><a href="services.html">Treatments</a></li>
-	                <li><a href="masters.html">Therapists</a></li>
-	                <li><a href="gallery.html">Gallery</a></li>
-	                <li><a href="blog.html">Blog</a></li>
-	                <li><a href="faq.html">FAQ</a></li>
-	                <li><a href="contacts.html">Contacts</a></li>
+	                <li><a href="about.html">소개</a></li>
+	                <!-- <li><a href="services.html">시술안내</a></li> -->
+	                <li><a href="masters.html">의료진</a></li>
+	                <li><a href="gallery.html">갤러리</a></li>
+	                <li><a href="blog.html">블로그</a></li>
+	                <li><a href="#">자주 묻는 질문</a></li>
+	                <li><a href="#">연락처</a></li>
 	            </ul>
 	            <div class="desc_btm">
 	                <!-- <div class="book_a_treatment">
@@ -249,7 +377,7 @@
 	                </div> -->
 	                <div class="card">
 	                    <a href="gift-card.html" class="card_lnk">
-	                        <span class="t">Card</span>
+	                        <span class="t">카드</span>
 	                        <span class="c"></span>
 	                    </a>
 	                </div>
@@ -261,29 +389,29 @@
 	    <div class="win_popup_ovr">
 	        <div class="win_popup_in">
 	            <div class="line_pp">
-	                <div class="h3">Мы рады ответить</div>
-	                <div class="h3">на ваши вопросы</div>
+	                <div class="h3">질문에 답변해</div>
+	                <div class="h3">드리겠습니다</div>
 	            </div>
 	            <div class="blc_pp_wt">
 	                <form action="blog.html#" method="post" class="f1">
 	                    <div class="rows rows50">
 	                        <div class="cols cols01">
-	                            <input type="text" required placeholder="Ваше имя*" data-parsley-length="[3, 80]" data-parsley-length-message="Значение должно содержать от 3 до 80 символов." data-parsley-pattern="^[а-яА-ЯёЁa-zA-Z ]+$" data-parsley-pattern-message="Значение должно содержать русские или английские символы.">
+	                            <input type="text" required placeholder="이름*" data-parsley-length="[3, 80]" data-parsley-length-message="Значение должно содержать от 3 до 80 символов." data-parsley-pattern="^[а-яА-ЯёЁa-zA-Z ]+$" data-parsley-pattern-message="Значение должно содержать русские или английские символы.">
 	                        </div>
 	                        <div class="cols cols02">
-	                            <input type="text" name="PHONE" class="phone" placeholder="Телефон*" required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" data-parsley-pattern-message="Значение не корректное."> 
-	                            <input type="text" name="EMAIL" class="email" placeholder="E-mail*" required>
+	                            <input type="text" name="PHONE" class="phone" placeholder="전화번호*" required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" data-parsley-pattern-message="Значение не корректное."> 
+	                            <input type="text" name="EMAIL" class="email" placeholder="이메일*" required>
 	                        </div>
 	                    </div>
 	                    <div class="rows rows100">
 	                        <div class="iagree">
 	                            <input type="checkbox" name="checkboxGB" id="checkboxGB" class="css-checkbox" checked/>
-	                            <label for="checkboxGB" class="css-label label_ch">Даю согласие на обработку персональных данных</a></label>
+	                            <label for="checkboxGB" class="css-label label_ch">개인정보 처리에 동의합니다</a></label>
 	                        </div> 
 	                    </div>  
 	                    <div class="rows rows100">
 	                        <div class="cols">
-	                            <button class="get_go" >Отправить</button>
+	                            <button class="get_go" >보내기</button>
 	                        </div>
 	                    </div>
 	                </form>
@@ -298,36 +426,36 @@
 	    <div class="l_popup_in">
 	        <div class="desc_ovr active">
 	            <div class="ttl">
-	                <div class="h2">Buy now</div>
-	                <p>Leave a request and our managers will contact you shortly to clarify the details.</p>
+	                <div class="h2">상담예약</div>
+	                <p>요청을 남겨주시면 담당자가 곧 연락하여 세부 사항을 명확히 해드릴 것입니다.</p>
 	            </div>
 	            <div class="desc">
 	                <!-- <form action="#" class="f1" data-parsley-validate data-parsley-errors-messages-disabled> -->
 	                <form action="blog.html#" class="f1">
 	                    <div class="rows">
 	                        <div class="cols cols01">
-	                            <div class="t">Name</div>
+	                            <div class="t">이름</div>
 	                        </div>
 	                        <div class="cols cols02">
-	                            <input type="text" name="NAME" required placeholder="Enter your name*" data-parsley-length="[3, 80]" data-parsley-length-message="The value must be between 3 and 80 characters." data-parsley-pattern="^[a-zA-Z ]+$" data-parsley-pattern-message="The value must contain English characters.">
+	                            <input type="text" name="NAME" required placeholder="이름을 입력하세요*" data-parsley-length="[3, 80]" data-parsley-length-message="The value must be between 3 and 80 characters." data-parsley-pattern="^[a-zA-Z ]+$" data-parsley-pattern-message="The value must contain English characters.">
 	                        </div>
 	                    </div> 
 	                    <div class="rows">
 	                        <div class="cols cols01">
-	                            <div class="t">email address</div>
+	                            <div class="t">이메일 주소</div>
 	                            
 	                        </div>
 	                        <div class="cols cols02">
-	                            <input type="text" name="EMAIL" class="email" placeholder="E-mail*" required>
+	                            <input type="text" name="EMAIL" class="email" placeholder="이메일*" required>
 	                        </div>
 	                    </div>
 	                    <div class="rows">
 	                        <div class="cols cols01">
-	                            <div class="t">email address</div>
+	                            <div class="t">이메일 주소</div>
 	                            
 	                        </div>
 	                        <div class="cols cols02">
-	                            <input type="text" name="PHONE" class="phone" placeholder="Enter your mobile number*"> 
+	                            <input type="text" name="PHONE" class="phone" placeholder="휴대폰 번호를 입력하세요*"> 
 	                        </div>
 	                    </div>
 	                    <p><input id="price_calc_1" type="hidden" name="price_evoucher" value="0" /></p>
@@ -335,7 +463,7 @@
 	                    <p><input id="tab_name" type="hidden" name="tab_name" value="0" /></p>
 	                    <div class="rows rows_btn">
 	                        <button class="get_go" >
-	                            <span class="t">Submit <span class="a"></span></span>  
+	                            <span class="t">제출 <span class="a"></span></span>  
 	                        </button>
 	                    </div>
 	                </form>
@@ -343,8 +471,8 @@
 	        </div> 
 	        <div class="desc_ovr ">
 	            <div class="ttl">
-	                <div class="h2">Thank you for <span class="br">your message!</span></div>
-	                <p>Our manager will contact you shortly.</p>
+	                <div class="h2">메시지를 보내주셔서 <span class="br">감사합니다!</span></div>
+	                <p>담당자가 곧 연락드릴 것입니다.</p>
 	            </div>
 	        </div>   
 	    </div>
@@ -356,11 +484,11 @@
 	
 	<div id="thank_you" class="hides win_popup thank_you">
 	    <div class="line_pp">
-	        <h3>Спасибо!</h3>
+	        <h3>감사합니다!</h3>
 	    </div>
 	    <div class="blc_pp_wt">
-	        <p>Благодарим за обращение. Ваша заявка принята</p>
-	        <span>Наш специалист свяжется с Вами в течение рабочего дня</span>
+	        <p>문의해 주셔서 감사합니다. 귀하의 요청이 접수되었습니다.</p>
+	        <span>담당자가 근무일 기준으로 연락드릴 것입니다.</span>
 	    </div>
 	</div>
 </body>

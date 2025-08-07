@@ -117,3 +117,9 @@ body, html {
     line-height: 120px !important;
     font-weight: 600 !important;
 }
+
+/* gallery_ovr을 화면 중앙으로 이동 */
+.gallery_ovr {
+    position: relative;
+    top: 25vh;
+}
