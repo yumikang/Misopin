@@ -79,9 +79,9 @@
 .j_top .h2 {
     color: #595959 !important;
     font-weight: 700 !important;
-    font-size: 100px !important;  /* 병원소개 텍스트 크기 조정 */
+    font-size: 90px !important;  /* 병원소개 텍스트 크기 조정 */
     line-height: 120px !important;
-    letter-spacing: 0.07em !important;  /* 자간 조정 (음수값으로 좁게, 양수값으로 넓게) */
+    letter-spacing: 0.15em !important;  /* 자간 조정 (음수값으로 좁게, 양수값으로 넓게) */
 }
 
 .j_top .txt {
