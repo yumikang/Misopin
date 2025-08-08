@@ -457,6 +457,17 @@
     line-height: 1.6 !important;
 }
 
+/* moves_text 섹션 mt_cols 텍스트 스타일 */
+.moves_text .mt_cols .t,
+#wrapper .moves_text .mt_cols .t,
+#wrap #wrapper .moves_text .mt_cols .t {
+    font-family: 'Freesentation', sans-serif !important;
+    font-weight: 700 !important; /* 굵게 */
+    font-size: 24px !important; /* 크기 조정 */
+    color: #292929 !important; /* 진한 색상 */
+    letter-spacing: 0.02em !important;
+}
+
 /* footer 하단 정보 스타일 */
 #footer .f_rows {
     display: flex !important;
