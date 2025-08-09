@@ -36,9 +36,32 @@
     <!-- <link rel="stylesheet" href="css/fonts.css"> -->
     <link rel="stylesheet" href="css/lib.min.css" media="(min-width: 320px)">
     <link rel="stylesheet" href="css/about.min.css" media="(min-width: 320px)">
-    <link rel="stylesheet" href="css/mi_about_custom.css?v=2">
+    <link rel="stylesheet" href="css/mi_about_custom.css?v=3">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/about.min.js"></script>
+    <script>
+        // 모바일 사이드 메뉴 드롭다운 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            // 메인 링크 클릭 시 서브메뉴 토글
+            const hasSubmenuLinks = document.querySelectorAll('.left_menu .has-submenu > a');
+            hasSubmenuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentLi = this.closest('.has-submenu');
+                    
+                    // 다른 열린 메뉴들을 닫기
+                    document.querySelectorAll('.left_menu .has-submenu.active').forEach(item => {
+                        if (item !== parentLi) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // 현재 메뉴 토글
+                    parentLi.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -57,13 +80,11 @@
 								<div class="cols cols02">
 									<div class="main_menu">
 										<ul class="menu_list">
-											<li><a href="about.html">About</a></li>
-											<li><a href="services.html">Treatments</a></li>
-											<li><a href="masters.html">Therapists</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li><a href="blog.html">Blog</a></li>
-											<li><a href="faq.html">FAQ</a></li>
-											<li><a href="contacts.html">Contacts</a></li>
+											<li><a href="about.html">미소핀</a></li>
+											<li><a href="blog.html">이벤트/공지사항</a></li>
+											<li><a href="gallery.html">내부사진</a></li>
+											<li><a href="blog-details-1.html">시술소개</a></li>
+											<li><a href="#">예약 페이지</a></li>
 										</ul> 
 									</div>	
 								</div>
@@ -221,49 +242,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="ms_bg_slr_over">
-							<div class="swiper pfo_slr">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="caption">
-											<div class="h3">Private Hammam</div>
-											<div class="bg">
-												<div class="bg_in" style="background-image: url(img/pn24.png);"></div>
-											</div>
-											<p>Experience the most luxurious treatments in the pearl of our 
-												SPA, the Turkish Hammam.</p>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="caption">
-											<div class="h3">Massages & Body Wrappings</div>
-											<div class="bg">
-												<div class="bg_in" style="background-image: url(img/pn25.png);"></div>
-											</div>
-											<p>Our wide range of Traditional Thai and Balinese massages
-												feature choices for any state of the body and mind. From
-												deeply relaxing Balinese stone massage to the Phytomer
-												Slimming treatments, to chocolate wrappings and 4 Hands
-												Royal Massage.</p>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="caption">
-											<div class="h3">Couples Treatments</div>
-											<div class="bg">
-												<div class="bg_in" style="background-image: url(img/pn26.png);"></div>
-											</div>
-											<p>7 Sky Spa offers spacious double rooms for you to enjoy  
-												treatments together with a good friend or a loving partner.</p>
-										</div>
-									</div>
-								</div>
-								<div class="pfo_nav">
-									<div class="pfo_prev swiper-button-prev"><span></span></div>
-									<div class="pfo_next swiper-button-next"><span></span></div>
-								</div>
-							</div>
-						</div>
 						
 					</div>
 				</div>
@@ -300,141 +278,7 @@
 				<div class="ya_map">
 
 				</div>
-				<!-- moves_text 섹션 제거 -->
-				    <!-- <div class="mt_rows_ovr mt_rows_ovr01">
-				        <div class="ln_m ln_m_top"></div>
-				        <div class="mt_rows_move mt_rows_move01">
-				         
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				          
-				            
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				           
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">Sale</div>
-				                    <img src="img/mt1.png" width="212" height="90" alt="">
-				                </div>
-				
-				        </div>
-				        <!-- <div class="lbl lbl01">
-				            <p>Stock and special offers</p>
-				        </div>
-				        <div class="lbl lbl02">
-				            <p>Stock and special offers</p>
-				        </div> -->
-				        <div class="dsc_top">
-				            <p>Stock and special offers</p>
-				        </div>	
-				        <div class="ln_m ln_m_btm"></div>					
-				    </div>
-				    <div class="mt_rows_ovr mt_rows_ovr02">
-				        <div class="mt_rows_move mt_rows_move02">
-				            
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>                
-				   
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>                
-				
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				                <div class="mt_cols">
-				                    <div class="t">7 Sky Spa</div>
-				                    <img src="img/mt2.png" width="209" height="209" alt="">
-				                </div>
-				           
-				        </div>
-				        <!-- <div class="lbl lbl01">
-				            <p>Stock and special offers</p>
-				        </div>
-				        <div class="lbl lbl02">
-				            <p>Stock and special offers</p>
-				        </div>	 -->
-				        <div class="ln_m ln_m_btm"></div>
-				      				
-				    </div> -->
-		
-				<!-- moves_text 종료 -->
+				<!-- moves_text 섹션 완전 제거 -->
 				
 				<div class="all_stock">
 				    <div class="container">
@@ -443,7 +287,7 @@
 				<div class="big_btn">
 				    <div class="container">
 				        <a href="about.html#e_win" class="e_win_lnk big_btn_lnk">
-				            <span class="t">상담예약하기</span>
+				            <span class="t">예약하기</span>
 				        </a>
 				    </div>
 				</div>
@@ -484,25 +328,40 @@
 	</div>	
 	<div class="left_menu lef_menu_w" style="opacity: 0">
 	    <div class="left_menu_in">
-	        <img src="img/logo_b.svg" alt="" width="99" height="16" class="lf_logo">
+	        <img src="img/logo.svg" alt="미소핀의원" width="160" height="24" class="lf_logo">
 	        <div class="left_close_m"></div> 
 	        <div class="desc">
 	            <ul class="l_nav">
-	                <li><a href="about.html">About</a></li>
-	                <li><a href="services.html">Treatments</a></li>
-	                <li><a href="masters.html">Therapists</a></li>
-	                <li><a href="gallery.html">Gallery</a></li>
-	                <li><a href="blog.html">Blog</a></li>
-	                <li><a href="faq.html">FAQ</a></li>
-	                <li><a href="contacts.html">Contacts</a></li>
-	            </ul>
+	                <li class="has-submenu">
+                    <a href="about.html">미소핀</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="about.html">병원소개</a></li>
+                        <li><a href="#">의료진 소개</a></li>
+                        <li><a href="#">진료시간</a></li>
+                    </ul>
+                </li>
+	                <li><a href="blog.html">이벤트/공지사항</a></li>
+	                <li><a href="gallery.html">내부사진</a></li>
+	                <li class="has-submenu">
+                    <a href="blog-details-1.html">시술소개</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="#">기미/색소</a></li>
+                        <li><a href="#">홍조/혈관</a></li>
+                        <li><a href="#">리프팅/탄력</a></li>
+                        <li><a href="#">모공/흉터</a></li>
+                        <li><a href="#">여드름</a></li>
+                        <li><a href="#">피부관리</a></li>
+                    </ul>
+                </li>
+	                <li><a href="#">예약 페이지</a></li>
+			            </ul>
 	            <div class="desc_btm">
 	                <!-- <div class="book_a_treatment">
 	                    <a href="#" class="bat_lnk">book a treatment</a>
 	                </div> -->
 	                <div class="card">
 	                    <a href="gift-card.html" class="card_lnk">
-	                        <span class="t">Card</span>
+	                        <span class="t">쿠폰</span>
 	                        <span class="c"></span>
 	                    </a>
 	                </div>
