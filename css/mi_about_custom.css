@@ -641,7 +641,7 @@ body .j_top {
     }
     
     .ms_bg .section-header .subtitle {
-        font-size: 16px !important;  /* 18px -> 16px로 조정 */
+        font-size: 18px !important;  /* 18px -> 16px로 조정 */
         line-height: 22px !important;
         letter-spacing: 0.08em !important;
     }
@@ -649,13 +649,15 @@ body .j_top {
     .ms_bg .desc .h3,
     #wrapper .ms_bg .desc .h3,
     #wrap #wrapper .ms_bg .desc .h3 {
-        font-size: 24px !important;
+        font-size: 22px !important;
         line-height: 32px !important;
+        margin-bottom: 10px !important;  /* h3 아래 간격 조정 */
     }
     
     .ms_bg .desc .t {
         font-size: 16px !important;
         line-height: 24px !important;
+        margin-top: 10px !important;  /* 텍스트 위 간격 조정 */
     }
     
     /* j_top 배경색 모바일에서도 강제 적용 */
@@ -679,14 +681,18 @@ body .j_top {
     }
     
     /* choose_gift_coupon 텍스트 모바일 대응 */
-    .choose_gift_coupon .h2 {
-        font-size: 36px !important;
-        line-height: 44px !important;
+    .choose_gift_coupon .h2,
+    .choose_gift_coupon .gf_ttl .h2 {
+        font-size: 28px !important;  /* 36px -> 28px로 줄임 */
+        line-height: 36px !important;
+        letter-spacing: 0.02em !important;
     }
     
-    .choose_gift_coupon .txt {
+    .choose_gift_coupon .txt,
+    .choose_gift_coupon .gf_ttl .txt {
         font-size: 14px !important;
         line-height: 20px !important;
+        letter-spacing: 0.01em !important;
     }
     
     /* big_btn 모바일 대응 */
@@ -699,7 +705,22 @@ body .j_top {
     .big_btn .big_btn_lnk .t {
         font-size: 24px !important;
         line-height: 36px !important;
-        padding-right: 40px !important;
+        padding-right: 50px !important;  /* 화살표 공간 확보 */
+        position: relative !important;
+        display: inline-block !important;
+        text-align: center !important;
+    }
+    
+    /* big_btn 화살표 모바일 대응 - 기존 애니메이션 유지 */
+    .big_btn .big_btn_lnk .t .a,
+    .big_btn .big_btn_lnk .t span.a {
+        position: absolute !important;
+        width: 25px !important;  /* 모바일용 크기 */
+        height: 18px !important;
+        right: 15px !important;  /* 오른쪽 여백 조정 */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        display: inline-block !important;
     }
     
     /* srces_ovr 위치 조정 모바일에서는 리셋 */
