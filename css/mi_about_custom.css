@@ -86,9 +86,22 @@
     font-size: inherit !important;
 }
 
-/* j_top 섹션 배경색 변경 */
-.j_top {
+/* j_top 섹션 배경색 변경 - 더 강력한 선택자 */
+.j_top,
+#wrapper .j_top,
+#wrap #wrapper .j_top,
+body .j_top {
     background: #F0EDE5 !important;
+    background-color: #F0EDE5 !important;
+    padding: 60px 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* j_top container에도 배경색 적용 */
+.j_top .container {
+    background: #F0EDE5 !important;
+    background-color: #F0EDE5 !important;
 }
 
 /* j_top 텍스트 색상을 어두운 색으로 변경 (배경이 밝아졌으므로) */
@@ -315,6 +328,38 @@
     padding: 0 !important; /* 패딩 제거로 간격 축소 */
 }
 
+/* ms_bg_slr_over 섹션 완전히 숨기기 (PC/모바일 모두) */
+.ms_bg_slr_over {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* leg_revival 섹션 완전히 숨기기 (PC/모바일 모두) */
+.leg_revival {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* mt_cards 섹션 완전히 숨기기 (PC/모바일 모두) */
+.mt_cards {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* moves_text 섹션 완전히 숨기기 (PC/모바일 모두) */
+.moves_text {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
 /* ms_bg 이미지 완전 고정 레이아웃 - 1.5배 크기 */
 .ms_bg .desc .d_img {
     width: 420px !important;  /* 280px * 1.5 = 420px */
@@ -515,4 +560,182 @@
 
 #footer .f_rows .cols a:hover {
     color: #666666 !important;
+}
+
+/* ==================== 모바일 반응형 스타일 ==================== */
+@media (max-width: 768px) {
+    /* ms_bg_slr_over 섹션 숨기기 - PC에서처럼 */
+    .ms_bg_slr_over {
+        display: none !important;
+    }
+    
+    /* srces_ovr 텍스트 모바일 대응 */
+    .srces_ovr .text-line,
+    #wrapper .srces_ovr .text-line,
+    #wrap #wrapper .srces_ovr .text-line {
+        font-size: 24px !important;  /* 44px -> 24px */
+        line-height: 32px !important;
+        letter-spacing: 0.01em !important;
+    }
+    
+    .srces_ovr .smaller-text {
+        font-size: 20px !important;  /* 40px -> 20px */
+        line-height: 28px !important;
+    }
+    
+    /* bg_main 배경 이미지 모바일 대응 */
+    .bg_main .lazy_bg {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    /* ms_bg 카드 레이아웃 모바일 대응 */
+    .ms_bg .rows {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 40px !important;
+    }
+    
+    .ms_bg .cols {
+        width: 100% !important;
+        max-width: 350px !important;
+    }
+    
+    .ms_bg .desc .d_img {
+        width: 100% !important;
+        max-width: 350px !important;
+        height: auto !important;
+        aspect-ratio: 420/570 !important;
+    }
+    
+    .ms_bg .desc .d_img img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
+        min-height: auto !important;
+    }
+    
+    /* ms_bg 텍스트 크기 조정 */
+    .ms_bg .section-header .main-title,
+    #wrapper .ms_bg .section-header .main-title,
+    #wrap #wrapper .ms_bg .section-header .main-title {
+        font-size: 28px !important;
+        line-height: 36px !important;
+    }
+    
+    .ms_bg .section-header .subtitle {
+        font-size: 18px !important;
+        line-height: 24px !important;
+    }
+    
+    .ms_bg .desc .h3,
+    #wrapper .ms_bg .desc .h3,
+    #wrap #wrapper .ms_bg .desc .h3 {
+        font-size: 24px !important;
+        line-height: 32px !important;
+    }
+    
+    .ms_bg .desc .t {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+    
+    /* j_top 배경색 모바일에서도 강제 적용 */
+    .j_top,
+    #wrapper .j_top,
+    #wrap #wrapper .j_top {
+        background: #F0EDE5 !important;
+        background-color: #F0EDE5 !important;
+    }
+    
+    /* j_top 텍스트 모바일 대응 */
+    .j_top .h2 {
+        font-size: 48px !important;
+        line-height: 60px !important;
+        letter-spacing: 0.05em !important;
+    }
+    
+    .j_top .txt {
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+    
+    /* choose_gift_coupon 텍스트 모바일 대응 */
+    .choose_gift_coupon .h2 {
+        font-size: 36px !important;
+        line-height: 44px !important;
+    }
+    
+    .choose_gift_coupon .txt {
+        font-size: 14px !important;
+        line-height: 20px !important;
+    }
+    
+    /* big_btn 모바일 대응 */
+    .big_btn .big_btn_lnk {
+        width: 90% !important;
+        max-width: 300px !important;
+        padding: 30px 20px 25px !important;
+    }
+    
+    .big_btn .big_btn_lnk .t {
+        font-size: 24px !important;
+        line-height: 36px !important;
+        padding-right: 40px !important;
+    }
+    
+    /* srces_ovr 위치 조정 모바일에서는 리셋 */
+    .srces_ovr,
+    #wrapper .srces_ovr,
+    #wrap #wrapper .srces_ovr {
+        top: 0 !important;
+        transform: none !important;
+        padding-bottom: 40px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* bg_main 텍스트 위치 모바일에서는 리셋 */
+    .bg_main .bg_p,
+    #wrapper .bg_main .bg_p,
+    #wrap #wrapper .bg_main .bg_p {
+        top: 0 !important;
+        transform: none !important;
+        padding-bottom: 40px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* ms_bg 위치 조정 모바일에서는 리셋 */
+    #wrapper .ms_bg,
+    #wrap #wrapper .ms_bg {
+        top: 0 !important;
+        transform: none !important;
+        margin-top: -200px !important;
+        padding: 100px 0 60px !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* 태블릿 대응 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ms_bg .rows {
+        gap: 20px !important;
+    }
+    
+    .ms_bg .cols {
+        width: 300px !important;
+    }
+    
+    .ms_bg .desc .d_img {
+        width: 280px !important;
+        height: 380px !important;
+    }
+    
+    .ms_bg .desc .d_img img {
+        width: 280px !important;
+        height: 380px !important;
+        min-width: 280px !important;
+        min-height: 380px !important;
+    }
 }
