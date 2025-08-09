@@ -1,5 +1,8 @@
 /* mi_about.html 페이지 커스텀 스타일 */
 
+/* Wanted Sans 영어 폰트 */
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
 /* Freesentation 폰트 - 다양한 weight 추가 */
 @font-face {
     font-family: 'Freesentation';
@@ -36,9 +39,22 @@
     font-style: normal;
 }
 
-/* 한글 텍스트에 Freesentation 폰트 적용 */
+/* 기본 폰트 설정 - 한글은 Freesentation */
 .h2, .h3, .txt, .text-line {
     font-family: 'Freesentation', sans-serif !important;
+}
+
+/* 영어 텍스트 전용 클래스 */
+.en-text {
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important;
+}
+
+/* 특정 영어 텍스트 선택자 */
+.subtitle, /* MISOPIN Special 등 */
+.main-menu a, /* 메뉴 링크 */
+.book_a_treatment a, /* book a treatment 버튼 */
+.card_lnk .t /* Card 텍스트 */ {
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important;
 }
 
 /* 두꺼운 텍스트는 font-weight 500 */
@@ -86,6 +102,7 @@
 
 .j_top .txt {
     color: #595959 !important;
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important; /* 영어 텍스트이므로 Wanted Sans 적용 */
     font-weight: 100 !important;
     font-size: 18px !important;  /* 서브 텍스트 크기 조정 */
     line-height: 28px !important;
@@ -109,7 +126,7 @@
     font-family: 'Freesentation', sans-serif !important;
     color: #595959 !important;
     font-weight: 400 !important;
-    font-size: 34px !important;
+    font-size: 44px !important;
     line-height: 44px !important;
     letter-spacing: 0.02em !important;
     margin-bottom: 8px !important;
