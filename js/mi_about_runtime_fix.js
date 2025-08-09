@@ -188,7 +188,7 @@
       }
     });
 
-    // 갤러리 이미지 패럴랙스 효과
+    // PC 갤러리 이미지 패럴랙스 효과
     if (document.querySelector('.glry_rows')) {
       const glryRows = document.querySelector('.glry_rows');
       const topCols = glryRows.querySelectorAll('.cols_tp');
@@ -216,6 +216,52 @@
             y: isMobile ? 45 : 145,
             ease: "none"
           }, 0);
+        }
+      }
+    }
+
+    // 모바일 갤러리 이미지 애니메이션 (mob_glry_rows)
+    if (document.querySelector('.mob_glry_rows')) {
+      const mobGlryRows = document.querySelector('.mob_glry_rows');
+      const images = mobGlryRows.querySelectorAll('.lt_col_img');
+      
+      if (images.length > 0) {
+        // 각 이미지에 개별 애니메이션 적용
+        images.forEach((img, index) => {
+          // 초기 상태 설정
+          gsap.set(img, {
+            opacity: 0,
+            y: 30,
+            scale: 0.95
+          });
+          
+          // 스크롤 트리거 애니메이션
+          gsap.to(img, {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.8,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: img,
+              start: "top bottom-=100",
+              once: true
+            }
+          });
+        });
+        
+        // 전체 컨테이너에 패럴랙스 효과 추가 (선택사항)
+        if (isMobile) {
+          gsap.to(mobGlryRows, {
+            y: -50,
+            ease: "none",
+            scrollTrigger: {
+              trigger: mobGlryRows,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1
+            }
+          });
         }
       }
     }
