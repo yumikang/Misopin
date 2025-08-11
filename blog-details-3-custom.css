@@ -1,0 +1,649 @@
+/* Custom CSS for blog-details-33.html */
+
+/* h3 t_split 영역 스타일 조정 */
+.j_ttl_s .h3.t_split {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .j_ttl_s .h3.t_split {
+        font-size: 32px;
+        line-height: 40px;
+        padding: 15px;
+    }
+}
+
+/* 배경 이미지 섹션 스타일 - 뷰포트 기준 반응형 */
+.bd_bg {
+    width: 100%;
+    /* 뷰포트 높이의 45% (클리닉 서브페이지 스타일) */
+    height: 45vh;
+    /* 최소/최대 높이 설정으로 극단적인 화면에서도 적절한 크기 유지 */
+    min-height: 350px;
+    max-height: 600px;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.bd_bg .bd_bg_in {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* 큰 화면에서도 가로 100% 유지 */
+@media (min-width: 1200px) {
+    .bd_bg {
+        margin: 60px 0;
+        /* 데스크톱에서는 조금 더 큰 높이 */
+        height: 50vh;
+        max-height: 700px;
+    }
+    
+    .bd_bg .bd_bg_in {
+        /* 이미지를 전체 영역에 맞추려면 cover, 이미지 전체를 보려면 contain */
+        background-size: cover;
+        /* background-size: contain; */
+    }
+}
+
+/* 중간 화면 반응형 */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .bd_bg {
+        margin: 50px 0;
+        height: 45vh;
+    }
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .bd_bg {
+        margin: 30px 0;
+        /* 모바일에서는 더 작은 높이 */
+        height: 35vh;
+        min-height: 250px;
+    }
+}
+
+/* 제목 영역 전체 패딩 조정 */
+.j_ttl_s {
+    padding: 80px 0 40px;
+}
+
+@media (max-width: 768px) {
+    .j_ttl_s {
+        padding: 60px 0 30px;
+    }
+}
+
+/* br 태그 스타일링 */
+.j_ttl_s .h3.t_split .br {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+/* 날짜 영역 스타일 */
+.j_ttl_s .dts {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ========== blog-details-1.html에서 복사한 스타일 ========== */
+
+/* 섹션 기본 스타일 */
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-padding-large {
+    padding: 80px 0;
+}
+
+/* 섹션 사이 간격 조정 - 개별 조정 가능 */
+/* 기본 간격 설정 */
+.bd_bg {
+    margin-bottom: 100px !important;
+}
+
+/* 카드 컨테이너 하단 간격 직접 조정 */
+.card-container {
+    margin-bottom: -50px !important;
+}
+
+/* 세 번째 섹션 (그래디언트 배너) 아래 간격 */
+.gradient-banner {
+    margin-bottom: 100px !important;
+}
+
+/* 다섯 번째 섹션 (이미지 배너) 아래 간격 */
+.image-banner {
+    margin-bottom: 60px !important;
+}
+
+/* 컨테이너 스타일 */
+.content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content-container-wide {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* 플렉스 레이아웃 */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+/* 텍스트 스타일 */
+.section-subtitle {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle-gold {
+    color: #8B7355;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    color: #333;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.section-title-white {
+    color: #333;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.section-title-medium {
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.section-text {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.section-text-small {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    word-break: keep-all;
+}
+
+.section-text-white {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.text-no-margin {
+    margin-bottom: 0 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-margin-large {
+    margin-bottom: 80px;
+}
+
+/* 이미지 스타일 */
+.rounded-image {
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.full-width {
+    width: 100%;
+    height: auto;
+}
+
+/* 플렉스 아이템 스타일 */
+.flex-item-600 {
+    flex: 0 1 600px;
+}
+
+.flex-item-700 {
+    flex: 0 1 700px;
+}
+
+/* 카드 스타일 */
+.card-container {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.age-card {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-image {
+    margin-bottom: 30px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    word-break: keep-all;
+    white-space: normal;
+}
+
+/* 배너 섹션 */
+.gradient-banner {
+    background: linear-gradient(135deg, rgba(218, 219, 213, 0.9) 0%, rgba(200, 200, 190, 0.8) 70%), url(img/blog_cd09.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    color: white;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.banner-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.banner-visual {
+    flex: 1;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+}
+
+.svg-graph {
+    width: 100%;
+    height: auto;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+/* 시술단계 스타일 */
+.procedure-header {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.procedure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.procedure-step {
+    text-align: center;
+}
+
+.procedure-step h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.procedure-step p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.procedure-step p.mb-8 {
+    margin-bottom: 8px;
+}
+
+.step-image {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.step-badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #d4af37;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 이미지 배너 섹션 */
+.image-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    position: relative;
+    background-image: url(img/blog3_cd01.png);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.banner-text-center {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.container-relative {
+    position: relative;
+    z-index: 2;
+}
+
+.section-subtitle-white {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section-title-xlarge {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.banner-description {
+    margin-top: 40px;
+}
+
+.section-text-white-bright {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.text-margin-top {
+    margin-top: 20px;
+}
+
+/* related_services 영역 커스터마이징 */
+.related_services {
+    background-color: #DADBD5 !important;
+}
+
+.related_services .related_services_bg {
+    background-color: #DADBD5 !important;
+}
+
+/* trio_itms 이미지 스타일 수정 */
+.related_services .trio_itms .itm_lnk {
+    overflow: visible !important;
+    transform: scale(0.7) !important;
+    display: block;
+}
+
+.related_services .trio_itms .itm_lnk .bg {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1) !important;
+    border-radius: 0 !important;
+}
+
+.related_services .trio_itms .itm_lnk:hover .bg {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+/* 라운딩 제거 */
+.related_services .trio_itms .cols {
+    border-radius: 0 !important;
+}
+
+.related_services .trio_itms .itm_lnk,
+.related_services .trio_itms .itm_lnk .bg {
+    border-radius: 0 !important;
+}
+
+/* 3장 이미지 사이 여백 조정 - 크기 줄인 만큼 간격도 조정 */
+.related_services .trio_itms .rows {
+    gap: 10px !important;
+}
+
+.related_services .trio_itms .cols {
+    margin: 0 5px !important;
+    flex: 0 1 calc(33.333% - 10px) !important;
+}
+
+/* 텍스트 오버레이 항상 표시 */
+.related_services .trio_itms .itm_lnk .desc {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* itm_ttl t_split 텍스트 가독성 개선 */
+.related_services .trio_itms .itm_lnk .itm_ttl .h3 {
+    color: #ffffff !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+
+/* 푸터 여백 */
+.footer-spacer {
+    height: 150px;
+    background-color: #DADBD5;
+}
+
+/* 푸터 스타일 */
+.footer-bg {
+    background-color: #DADBD5 !important;
+}
+
+.footer-info {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-link:hover {
+    color: #333;
+}
+
+.footer-text {
+    color: #333;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 40px 0;
+    }
+    
+    .section-padding-large {
+        padding: 60px 0;
+    }
+    
+    .content-container,
+    .content-container-wide {
+        padding: 0 20px;
+    }
+    
+    .flex-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title-medium {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title-xlarge {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .section-text {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .section-text-small {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .section-text-white-bright {
+        font-size: 16px;
+    }
+    
+    .card-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .card-image img {
+        height: 250px;
+    }
+    
+    .banner-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .procedure-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .circle-image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .step-badge {
+        top: -5px;
+        right: 5px;
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+    
+    .image-banner {
+        padding: 60px 0;
+    }
+}
