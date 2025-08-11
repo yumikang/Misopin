@@ -116,6 +116,27 @@
     padding: 80px 0;
 }
 
+/* 섹션 사이 간격 조정 - 개별 조정 가능 */
+/* 기본 간격 설정 */
+.bd_bg {
+    margin-bottom: 100px !important;
+}
+
+/* 카드 컨테이너 하단 간격 직접 조정 */
+.card-container {
+    margin-bottom: -50px !important;
+}
+
+/* 세 번째 섹션 (그래디언트 배너) 아래 간격 */
+.gradient-banner {
+    margin-bottom: 100px !important;
+}
+
+/* 다섯 번째 섹션 (이미지 배너) 아래 간격 */
+.image-banner {
+    margin-bottom: 60px !important;
+}
+
 /* 컨테이너 스타일 */
 .content-container {
     max-width: 1400px;
@@ -144,7 +165,7 @@
 .section-subtitle {
     color: #999;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
@@ -190,7 +211,8 @@
     color: #666;
     font-size: 16px;
     line-height: 1.8;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    word-break: keep-all;
 }
 
 .section-text-white {
@@ -235,14 +257,16 @@
 /* 카드 스타일 */
 .card-container {
     display: flex;
-    gap: 60px;
+    gap: 80px;
     justify-content: center;
+    padding: 40px 0;
 }
 
 .age-card {
     flex: 1;
     max-width: 500px;
     text-align: center;
+    padding: 20px;
 }
 
 .card-image {
@@ -267,8 +291,10 @@
 .card-text {
     color: #666;
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    word-break: keep-all;
+    white-space: normal;
 }
 
 /* 배너 섹션 */
