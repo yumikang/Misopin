@@ -436,13 +436,58 @@
     margin-top: 20px;
 }
 
-/* related_services 영역 배경색 커스터마이징 */
+/* related_services 영역 커스터마이징 */
 .related_services {
     background-color: #DADBD5 !important;
 }
 
 .related_services .related_services_bg {
     background-color: #DADBD5 !important;
+}
+
+/* trio_itms 이미지 스타일 수정 */
+.related_services .trio_itms .itm_lnk {
+    overflow: visible !important;
+    transform: scale(0.7) !important;
+    display: block;
+}
+
+.related_services .trio_itms .itm_lnk .bg {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: scale(1) !important;
+    border-radius: 0 !important;
+}
+
+.related_services .trio_itms .itm_lnk:hover .bg {
+    transform: scale(1) !important;
+    opacity: 1 !important;
+}
+
+/* 라운딩 제거 */
+.related_services .trio_itms .cols {
+    border-radius: 0 !important;
+}
+
+.related_services .trio_itms .itm_lnk,
+.related_services .trio_itms .itm_lnk .bg {
+    border-radius: 0 !important;
+}
+
+/* 3장 이미지 사이 여백 조정 - 크기 줄인 만큼 간격도 조정 */
+.related_services .trio_itms .rows {
+    gap: 10px !important;
+}
+
+.related_services .trio_itms .cols {
+    margin: 0 5px !important;
+    flex: 0 1 calc(33.333% - 10px) !important;
+}
+
+/* 텍스트 오버레이 항상 표시 */
+.related_services .trio_itms .itm_lnk .desc {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* 푸터 여백 */
