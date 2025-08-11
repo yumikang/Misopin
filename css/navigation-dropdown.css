@@ -1,0 +1,161 @@
+/* 네비게이션 드롭다운 메뉴 공통 스타일 */
+
+/* 스크롤시 네비게이션 sticky 고정 (fixed 대신 sticky 사용) */
+#header,
+.header {
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+/* 헤더 높이만큼 body에 패딩 추가 제거 (sticky는 패딩 불필요) */
+body {
+    padding-top: 0 !important;
+}
+
+/* 스크롤시 헤더 배경 */
+.header.scrolled,
+#header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled .menu_list > li > a,
+#header.scrolled .menu_list > li > a {
+    color: #333 !important;
+}
+
+/* 기본 헤더 (흰색 배경이 아닌 경우) */
+#header:not(.header_b) {
+    background-color: transparent;
+}
+
+#header:not(.header_b).scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* 밝은 배경용 메뉴 (header_b) */
+.header_b .menu_list > li > a {
+    color: #333 !important;
+    font-size: 13px !important;
+    padding: 0 10px !important;
+}
+
+.header_b .menu_list > li > a:hover {
+    color: #000 !important;
+}
+
+/* 메뉴 간격 조정 */
+.menu_list > li {
+    position: relative;
+    margin: 0 5px !important;
+}
+
+/* 드롭다운 화살표 */
+.menu_list > li.has-submenu > a:after {
+    content: '▼';
+    font-size: 10px;
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.menu_list > li.has-submenu:hover > a:after {
+    transform: rotate(180deg);
+}
+
+/* 서브메뉴 스타일 */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(255, 255, 255, 0.98);
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 0;  /* 간격 제거 */
+    pointer-events: none;  /* 기본적으로 클릭 불가 */
+}
+
+/* 호버 영역 확장을 위한 가상 요소 */
+.menu_list > li.has-submenu::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;  /* 호버 브릿지 영역 */
+    background: transparent;
+    z-index: 999;
+}
+
+.menu_list > li:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;  /* 호버시 클릭 가능 */
+}
+
+.submenu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #333 !important;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: #F4F8FC;
+    color: #000 !important;
+    padding-left: 25px;
+}
+
+/* 반응형 */
+@media (max-width: 1400px) {
+    .header_b .menu_list li a {
+        font-size: 12px !important;
+        padding: 0 8px !important;
+    }
+    .menu_list > li {
+        margin: 0 3px !important;
+    }
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    .submenu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        margin-top: 0;
+        border-radius: 0;
+        background-color: rgba(255, 255, 255, 0.95);
+        transform: none;
+    }
+    
+    .menu_list > li:hover .submenu {
+        transform: none;
+    }
+    
+    .menu_list > li.has-submenu > a:after {
+        float: right;
+    }
+}
