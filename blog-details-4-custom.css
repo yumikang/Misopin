@@ -565,7 +565,7 @@
 
 /* itm_ttl t_split 텍스트 가독성 개선 */
 .related_services .trio_itms .itm_lnk .itm_ttl .h3 {
-    color: #ffffff !important;
+    color: #3f3f3f !important;
     font-size: 30px !important;
     font-weight: bold !important;
 }
@@ -691,4 +691,17 @@
     .image-banner {
         padding: 60px 0;
     }
+}
+
+/* 가운데 배치 배너 스타일 */
+.banner-content-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.banner-text-right {
+    max-width: 600px;
+    text-align: center;
 }
