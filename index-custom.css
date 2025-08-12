@@ -1,0 +1,72 @@
+/* Custom CSS for index.html */
+
+/* 최신 의료장비 섹션 텍스트 왼쪽 정렬 */
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc {
+    text-align: left !important;
+}
+
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc * {
+    text-align: left !important;
+}
+
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc .h3.t_split {
+    text-align: left !important;
+}
+
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc .slideMiniPic.t_split {
+    text-align: left !important;
+}
+
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc p.t_split_up {
+    text-align: left !important;
+}
+
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc .pfo_lnk {
+    text-align: left !important;
+}
+
+.projects_fix_ovr .projects_fix .rows .cols.cols01 .up.desc .pfo_lnk a.t_split_rm {
+    text-align: left !important;
+}
+
+/* 더 강력한 override */
+.cols01 .desc p {
+    text-align: left !important;
+}
+
+.cols01 .desc {
+    text-align: left !important;
+}
+
+/* 슬라이드 이미지 스타일 조정 */
+/* 기본 슬라이드 이미지 라운딩 값 줄이기 */
+.ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide .caption .bg {
+    border-radius: 150px !important; /* 기존 414px에서 크게 줄임 */
+}
+
+/* 비활성 슬라이드 (좌우 이미지) 크기 키우기 */
+.ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide .caption .bg {
+    width: 200px !important; /* 기존 143px에서 증가 */
+    height: 280px !important; /* 기존 210px에서 증가 */
+    border-radius: 100px !important; /* 비활성 상태 라운딩 */
+}
+
+/* 활성 슬라이드 (가운데 이미지) 스타일 */
+.ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide.swiper-slide-active .caption .bg,
+.ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide.swiper-slide-duplicate-active .caption .bg {
+    border-radius: 200px !important; /* 활성 상태 라운딩 값 줄임 */
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+    .ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide .caption .bg {
+        width: 120px !important;
+        height: 180px !important;
+        border-radius: 60px !important;
+    }
+    
+    .ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide.swiper-slide-active .caption .bg,
+    .ph_slr_ovr .ph_slr_n .swiper-wrapper .swiper-slide.swiper-slide-duplicate-active .caption .bg {
+        border-radius: 120px !important;
+    }
+}
