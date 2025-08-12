@@ -1,5 +1,50 @@
 /* Custom CSS for blog-details-33.html */
 
+/* 드롭다운 메뉴 스타일 */
+.main_menu .menu_list > li {
+    position: relative;
+}
+.main_menu .menu_list > li.has-sub > a:after {
+    content: '';
+    width: 0;
+    height: 0;
+    margin-left: 8px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #333;
+    vertical-align: middle;
+    display: inline-block;
+}
+.main_menu .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(30, 30, 30, 0.95);
+    min-width: 200px;
+    padding: 10px 0;
+    display: none;
+    z-index: 999;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.main_menu .menu_list > li:hover .sub-menu {
+    display: block;
+}
+.main_menu .sub-menu li {
+    list-style: none;
+}
+.main_menu .sub-menu li a {
+    display: block;
+    padding: 10px 25px;
+    color: #fff !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease;
+}
+.main_menu .sub-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 30px;
+}
+
 /* h3 t_split 영역 스타일 조정 */
 .j_ttl_s .h3.t_split {
     font-size: 48px;
