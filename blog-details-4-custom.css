@@ -565,7 +565,7 @@
 
 /* itm_ttl t_split 텍스트 가독성 개선 */
 .related_services .trio_itms .itm_lnk .itm_ttl .h3 {
-    color: #3f3f3f !important;
+    color: #0d0d0d !important;
     font-size: 30px !important;
     font-weight: bold !important;
 }
