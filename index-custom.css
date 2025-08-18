@@ -70,3 +70,159 @@
         border-radius: 120px !important;
     }
 }
+
+/* 원장 소개 섹션 스타일 */
+.director-introduction-section {
+    padding: 120px 0;
+    background-color: #f8f6f3;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    clear: both;
+}
+
+.director-intro-content {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.director-text-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.director-main-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    font-family: 'SuisseIntl', sans-serif;
+}
+
+.director-subtitle {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 50px;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.director-clinic-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.director-description {
+    margin-bottom: 25px;
+}
+
+.director-description p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.director-description strong {
+    color: #8B7355;
+    font-weight: bold;
+}
+
+.director-philosophy p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+.director-image-content {
+    flex: 1;
+    max-width: 700px;
+}
+
+.director-image-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #f5f3f0 0%, #e8e6e3 100%);
+}
+
+.director-hands-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+    .director-intro-content {
+        gap: 60px;
+        padding: 0 30px;
+    }
+    
+    .director-main-title {
+        font-size: 36px;
+    }
+    
+    .director-image-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .director-introduction-section {
+        padding: 80px 0;
+    }
+    
+    .director-intro-content {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    
+    .director-main-title {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    .director-subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .director-clinic-name {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .director-description,
+    .director-philosophy {
+        text-align: center;
+    }
+    
+    .director-description p {
+        font-size: 16px;
+    }
+    
+    .director-philosophy p {
+        font-size: 15px;
+    }
+    
+    .director-image-container {
+        height: 300px;
+        border-radius: 15px;
+    }
+}

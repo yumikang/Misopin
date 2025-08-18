@@ -1,4 +1,4 @@
-/* Custom CSS for blog-details-2.html */
+/* Custom CSS for blog-details-33.html */
 
 /* 드롭다운 메뉴 스타일 */
 .main_menu .menu_list > li {
@@ -74,6 +74,7 @@
     min-height: 350px;
     max-height: none;
     position: relative;
+    z-index: 0;
     overflow: visible;
     margin: 40px 0;
 }
@@ -311,19 +312,22 @@
     flex: 1;
     max-width: 500px;
     text-align: center;
-    padding: 20px;
+    padding: 0; /* 안쪽 여백 제거 → 이미지가 카드 전체를 차지하도록 */
 }
 
 .card-image {
+    aspect-ratio: 1 / 1;        /* 정사각형 비율 유지 */
+    border-radius: 15px;
+    overflow: hidden;           /* 이미지가 둥근 모서리에 맞게 잘리도록 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin-bottom: 30px;
 }
 
 .card-image img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 100%;
+    object-fit: cover;          /* 원본이 1:1이 아니더라도 꽉 채움 */
+    display: block;
 }
 
 .card-title {
@@ -344,7 +348,7 @@
 
 /* 배너 섹션 */
 .gradient-banner {
-    background: linear-gradient(135deg, rgba(218, 219, 213, 0.9) 0%, rgba(200, 200, 190, 0.8) 70%), url(img/blog2_cd03.png);
+    background: linear-gradient(135deg, rgba(218, 219, 213, 0.9) 0%, rgba(200, 200, 190, 0.8) 70%), url(img/blog_cd09.jpg);
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -383,22 +387,6 @@
 .svg-graph {
     width: 100%;
     height: auto;
-}
-
-/* 제품 이미지 컨테이너 */
-.product-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-}
-
-.product-image {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    /* 배경 효과 제거 */
 }
 
 .mb-30 {
@@ -478,7 +466,7 @@
     background-position: center;
     padding: 120px 0;
     position: relative;
-    background-image: url(img/blog2_11.jpeg);
+    background-image: url(img/blog_cd08.png);
 }
 
 .banner-overlay {

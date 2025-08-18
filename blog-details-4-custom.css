@@ -68,34 +68,35 @@
 /* 배경 이미지 섹션 스타일 - 뷰포트 기준 반응형 */
 .bd_bg {
     width: 100%;
-    /* 뷰포트 높이의 45% (클리닉 서브페이지 스타일) */
-    height: 45vh;
+    /* 최소 높이로 변경하여 내용에 따라 확장 가능 */
+    min-height: 45vh;
     /* 최소/최대 높이 설정으로 극단적인 화면에서도 적절한 크기 유지 */
     min-height: 350px;
-    max-height: 600px;
+    max-height: none;
     position: relative;
-    overflow: hidden;
+    z-index: 0;
+    overflow: visible;
     margin: 40px 0;
 }
 
 .bd_bg .bd_bg_in {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* 큰 화면에서도 가로 100% 유지 */
 @media (min-width: 1200px) {
     .bd_bg {
         margin: 60px 0;
-        /* 데스크톱에서는 조금 더 큰 높이 */
-        height: 50vh;
-        max-height: 700px;
+        /* 데스크톱에서는 조금 더 큰 최소 높이 */
+        min-height: 50vh;
     }
     
     .bd_bg .bd_bg_in {
@@ -109,7 +110,7 @@
 @media (min-width: 769px) and (max-width: 1199px) {
     .bd_bg {
         margin: 50px 0;
-        height: 45vh;
+        min-height: 45vh;
     }
 }
 
@@ -117,8 +118,8 @@
 @media (max-width: 768px) {
     .bd_bg {
         margin: 30px 0;
-        /* 모바일에서는 더 작은 높이 */
-        height: 35vh;
+        /* 모바일에서는 더 작은 최소 높이 */
+        min-height: 35vh;
         min-height: 250px;
     }
 }
@@ -230,7 +231,7 @@
 }
 
 .section-title-white {
-    color: #333;
+    color: #ffffff;
     font-size: 42px;
     font-weight: bold;
     line-height: 1.3;
@@ -311,19 +312,22 @@
     flex: 1;
     max-width: 500px;
     text-align: center;
-    padding: 20px;
+    padding: 0; /* 안쪽 여백 제거 → 이미지가 카드 전체를 차지하도록 */
 }
 
 .card-image {
+    aspect-ratio: 1 / 1;        /* 정사각형 비율 유지 */
+    border-radius: 15px;
+    overflow: hidden;           /* 이미지가 둥근 모서리에 맞게 잘리도록 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     margin-bottom: 30px;
 }
 
 .card-image img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 100%;
+    object-fit: cover;          /* 원본이 1:1이 아니더라도 꽉 채움 */
+    display: block;
 }
 
 .card-title {
@@ -387,6 +391,13 @@
 
 .mb-30 {
     margin-bottom: 30px;
+}
+
+/* 시술단계 섹션 겹침 방지 */
+.bd_bg.section-padding-large {
+    padding-bottom: clamp(80px, 10vw, 140px);
+    isolation: isolate;
+    z-index: 1;
 }
 
 /* 시술단계 스타일 */
@@ -455,6 +466,7 @@
     background-position: center;
     padding: 120px 0;
     position: relative;
+    z-index: 0;
     background-image: url(img/blog4_cd10.jpeg);
 }
 
@@ -518,10 +530,10 @@
     background-color: #DADBD5 !important;
 }
 
-/* trio_itms 이미지 스타일 수정 */
+/* trio_itms 이미지 스타일 수정 - transform 제거로 레이아웃 안정화 */
 .related_services .trio_itms .itm_lnk {
     overflow: visible !important;
-    transform: scale(0.7) !important;
+    transform: none !important;
     display: block;
 }
 
