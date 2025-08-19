@@ -1,30 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <title>Magical SPA Salon</title>
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Black.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Bold.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Book.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Light.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Medium.woff2"> 
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Regular.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-SemiBold.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Thin.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Ultralight.woff2">
-    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/Gallient/Gallient.woff2">
+    <!-- CDN 프리커넥트 추가 -->
+    <link rel="preconnect" href="https://fastly.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://fastly.jsdelivr.net">
 
     <link rel="preload" href="css/lib.min.css" as="style">
     <link rel="preload" href="css/about.min.css" as="style">
     <link rel="preload" href="js/jquery-3.6.0.min.js" as="script">
     <link rel="preload" href="js/about.min.js" as="script">
     
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="img/favicon/site.webmanifest.html">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
@@ -34,17 +27,27 @@
     <meta name="keywords" content="Magical SPA Salon">
     
     <!-- <link rel="stylesheet" href="css/fonts.css"> -->
-    <link rel="stylesheet" href="css/lib.min.css" media="(min-width: 320px)">
-    <link rel="stylesheet" href="css/about.min.css" media="(min-width: 320px)">
-    <link rel="stylesheet" href="css/mi_about_custom.css?v=3">
-    <link rel="stylesheet" href="css/custom.css" media="(min-width: 320px)">
-    <link rel="stylesheet" href="mi_about-custom.css">
+    <link rel="stylesheet" href="css/lib.min.css">
+    <link rel="stylesheet" href="css/about.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/mi_about_custom_clean.css?v=5">
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/about.min.js"></script>
     <script src="js/mi_about_runtime_fix.js"></script>
     <script>
-        // 모바일 사이드 메뉴 드롭다운 기능
+        // 데이터 속성으로 배경 이미지 설정
         document.addEventListener('DOMContentLoaded', function() {
+            // 배경 이미지 설정
+            const bgMain = document.querySelector('.bg_main[data-bg]');
+            if (bgMain) {
+                const bgUrl = bgMain.getAttribute('data-bg');
+                const lazyBg = bgMain.querySelector('.lazy_bg');
+                if (lazyBg && bgUrl) {
+                    lazyBg.style.backgroundImage = `url('${bgUrl}')`;
+                }
+            }
+            
+            // 모바일 사이드 메뉴 드롭다운 기능
             // 메인 링크 클릭 시 서브메뉴 토글
             const hasSubmenuLinks = document.querySelectorAll('.left_menu .has-submenu > a');
             hasSubmenuLinks.forEach(link => {
@@ -67,7 +70,7 @@
     </script>
 </head>
 
-<body>
+<body class="mi-about">
 	<div class="scroller">
 		<div id="wrap">
 			<div id="wrapper">
@@ -84,7 +87,7 @@
 									<div class="main_menu">
 										<ul class="menu_list">
 											<li class="has-sub">
-												<a href="#">미소핀 소개</a>
+												<a href="mi_about.html">미소핀 소개</a>
 												<ul class="sub-menu">
 													<li><a href="mi_about.html">병원 소개</a></li>
 													<li><a href="blog.html">이벤트/공지</a></li>
@@ -92,14 +95,14 @@
 												</ul>
 											</li>
 											<li class="has-sub">
-												<a href="#">주름/보톡스</a>
+												<a href="blog-details-1.html">주름/보톡스</a>
 												<ul class="sub-menu">
 													<li><a href="blog-details-1.html">보톡스</a></li>
 													<li><a href="blog-details-2.html">제오민</a></li>
 												</ul>
 											</li>
 											<li class="has-sub">
-												<a href="#">볼륨/리프팅</a>
+												<a href="blog-details-2.html">볼륨/리프팅</a>
 												<ul class="sub-menu">
 													<li><a href="blog-details-3.html">필러</a></li>
 													<li><a href="blog-details-4.html">스킨부스터</a></li>
@@ -107,14 +110,14 @@
 												</ul>
 											</li>
 											<li class="has-sub">
-												<a href="#">피부케어</a>
+												<a href="blog-details-3.html">피부케어</a>
 												<ul class="sub-menu">
 													<li><a href="blog-details-6.html">여드름치료</a></li>
 													<li><a href="blog-details-7.html">필링</a></li>
 												</ul>
 											</li>
 											<li class="has-sub">
-												<a href="#">제거시술</a>
+												<a href="blog-details-4.html">제거시술</a>
 												<ul class="sub-menu">
 													<li><a href="blog-details-8.html">점</a></li>
 													<li><a href="blog-details-9.html">비립종</a></li>
@@ -229,10 +232,10 @@
 					</div>
 				</div>
 				
-				<div class="bg_main" style="position: relative; width: 100%; height: 600px; margin: 60px 0;">
-					<div style="position: relative; width: 100%; height: 600px; background-image: url('img/about/about19.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-						<div style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); text-align: center; z-index: 10;">
-							<span style="display: inline-block; color: #fff; font-size: 36px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); background: rgba(0,0,0,0.3); padding: 20px 40px; border-radius: 10px;">맑고 균일한 피부, 차이가 보입니다.</span> 
+				<div class="bg_main" data-bg="img/about/about19.webp">
+					<div class="lazy_bg back_bg">
+						<div class="bg_p">
+							<h2 class="h2b">맑고 균일한 피부, 차이가 보입니다.</h2>
 						</div>
 					</div>
 				</div>
@@ -317,15 +320,8 @@
 
 				</div>
 
-				<div class="ya_map">
-
-				</div>
 				<!-- moves_text 섹션 완전 제거 -->
 				
-				<div class="all_stock">
-				    <div class="container">
-				    </div>
-				</div>
 				<div class="big_btn">
 				    <div class="container">
 				        <a href="about.html#e_win" class="e_win_lnk big_btn_lnk">
@@ -368,7 +364,7 @@
 		
 				
 	</div>	
-	<div class="left_menu lef_menu_w" style="opacity: 0">
+	<div class="left_menu lef_menu_w">
 	    <div class="left_menu_in">
 	        <img src="img/logo.svg" alt="미소핀의원" width="160" height="24" class="lf_logo">
 	        <div class="left_close_m"></div> 
@@ -415,29 +411,29 @@
 	    <div class="win_popup_ovr">
 	        <div class="win_popup_in">
 	            <div class="line_pp">
-	                <div class="h3">Мы рады ответить</div>
-	                <div class="h3">на ваши вопросы</div>
+	                <div class="h3">문의사항이 있으신가요?</div>
+	                <div class="h3">언제든지 연락주세요</div>
 	            </div>
 	            <div class="blc_pp_wt">
 	                <form action="about.html#" method="post" class="f1">
 	                    <div class="rows rows50">
 	                        <div class="cols cols01">
-	                            <input type="text" required placeholder="Ваше имя*" data-parsley-length="[3, 80]" data-parsley-length-message="Значение должно содержать от 3 до 80 символов." data-parsley-pattern="^[а-яА-ЯёЁa-zA-Z ]+$" data-parsley-pattern-message="Значение должно содержать русские или английские символы.">
+	                            <input type="text" required placeholder="이름*" data-parsley-length="[2, 80]" data-parsley-length-message="2자 이상 80자 이하로 입력해주세요." data-parsley-pattern="^[가-힣a-zA-Z ]+$" data-parsley-pattern-message="한글 또는 영문으로 입력해주세요.">
 	                        </div>
 	                        <div class="cols cols02">
-	                            <input type="text" name="PHONE" class="phone" placeholder="Телефон*" required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" data-parsley-pattern-message="Значение не корректное."> 
-	                            <input type="text" name="EMAIL" class="email" placeholder="E-mail*" required>
+	                            <input type="text" name="PHONE" class="phone" placeholder="전화번호*" required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" data-parsley-pattern-message="올바른 전화번호를 입력해주세요."> 
+	                            <input type="text" name="EMAIL" class="email" placeholder="이메일*" required>
 	                        </div>
 	                    </div>
 	                    <div class="rows rows100">
 	                        <div class="iagree">
 	                            <input type="checkbox" name="checkboxGB" id="checkboxGB" class="css-checkbox" checked/>
-	                            <label for="checkboxGB" class="css-label label_ch">Даю согласие на обработку персональных данных</a></label>
+	                            <label for="checkboxGB" class="css-label label_ch">개인정보 수집 및 이용에 동의합니다</label>
 	                        </div> 
 	                    </div>  
 	                    <div class="rows rows100">
 	                        <div class="cols">
-	                            <button class="get_go" >Отправить</button>
+	                            <button class="get_go">전송하기</button>
 	                        </div>
 	                    </div>
 	                </form>
@@ -510,11 +506,11 @@
 	
 	<div id="thank_you" class="hides win_popup thank_you">
 	    <div class="line_pp">
-	        <h3>Спасибо!</h3>
+	        <h3>감사합니다!</h3>
 	    </div>
 	    <div class="blc_pp_wt">
-	        <p>Благодарим за обращение. Ваша заявка принята</p>
-	        <span>Наш специалист свяжется с Вами в течение рабочего дня</span>
+	        <p>문의 주셔서 감사합니다. 접수가 완료되었습니다.</p>
+	        <span>담당자가 영업일 기준 1일 이내에 연락드리겠습니다.</span>
 	    </div>
 	</div>
 </body>

@@ -1,0 +1,722 @@
+/* ============================================
+   mi_about.html 페이지 전용 스타일 (정리된 버전)
+   스코핑: .mi-about 클래스 사용
+   !important 최소화
+   ============================================ */
+
+/* ==================== 폰트 정의 ==================== */
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==================== 기본 폰트 설정 (스코핑) ==================== */
+.mi-about .h2,
+.mi-about .h3,
+.mi-about .txt,
+.mi-about .text-line {
+    font-family: 'Freesentation', sans-serif;
+}
+
+/* 영어 텍스트 전용 */
+.mi-about .en-text,
+.mi-about .subtitle,
+.mi-about .main-menu a,
+.mi-about .book_a_treatment a,
+.mi-about .card_lnk .t {
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important;
+}
+
+/* ==================== j_top 섹션 (상단 소개) ==================== */
+.mi-about .j_top {
+    background: #F0EDE5;
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.mi-about .j_top .container {
+    background: #F0EDE5;
+}
+
+.mi-about .j_top .h2 {
+    font-size: 56px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: 500;
+}
+
+.mi-about .j_top .txt {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+/* ==================== 갤러리 섹션 ==================== */
+.mi-about .glry_rows,
+.mi-about .mob_glry_rows {
+    background: #F0EDE5;
+}
+
+/* ==================== srces_ovr 섹션 ==================== */
+.mi-about .srces_ovr {
+    background: #F0EDE5;
+    /* 위치 관련 음수 마진/변환 제거 - 정상 플로우 */
+    position: static;
+    padding: 80px 0;
+}
+
+.mi-about .srces_ovr .h2 {
+    font-family: 'Freesentation', sans-serif;
+    color: #595959;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.01em;
+}
+
+.mi-about .srces_ovr .text-line {
+    font-family: 'Freesentation', sans-serif;
+    color: #595959;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 44px;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.mi-about .srces_ovr .smaller-text {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    display: block;
+}
+
+/* ==================== bg_main 섹션 (히어로 이미지) ==================== */
+.mi-about .bg_main {
+    position: relative;
+    width: 100%;
+    margin: 60px 0;
+    overflow: visible;
+}
+
+.mi-about .bg_main .lazy_bg {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.mi-about .bg_main .bg_p {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.mi-about .bg_main .h2b {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================== ms_bg 섹션 (철학 섹션) ==================== */
+.mi-about .ms_bg {
+    /* background는 테마 패치에서 관리 */
+    border-radius: 3000px 3000px 0 0;
+    /* 음수 마진 제거, 정상 spacing */
+    padding: 120px 0 80px;
+    margin-top: 80px;
+    position: relative;
+    /* overflow는 테마 패치에서 hidden으로 설정 */
+}
+
+.mi-about .ms_bg .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.mi-about .ms_bg .section-header .subtitle {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #999999;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.mi-about .ms_bg .section-header .main-title {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 50px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #292929;
+}
+
+.mi-about .ms_bg .rows {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.mi-about .ms_bg .cols {
+    flex: none;
+    width: 450px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.mi-about .ms_bg .desc .d_img {
+    width: 420px;
+    height: 570px;
+    margin: 0 auto 100px auto !important;  /* 60px → 100px로 더 증가 + !important 추가 */
+    overflow: hidden;
+    border-radius: 0;
+    display: block;
+}
+
+.mi-about .ms_bg .desc .d_img img {
+    width: 420px;
+    height: 570px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 0;
+    display: block;
+    max-width: none;
+    min-width: 420px;
+    min-height: 570px;
+}
+
+.mi-about .ms_bg .desc .h3 {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    color: #292929;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 10px;  /* 텍스트 시작점에 추가 여백 */
+}
+
+.mi-about .ms_bg .desc .t {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #666666;
+    font-weight: 400;
+}
+
+/* ==================== choose_gift_coupon 섹션 ==================== */
+.mi-about .choose_gift_coupon {
+    background: #F0EDE5;
+    padding: 80px 0;
+}
+
+.mi-about .choose_gift_coupon .h2 {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: 0.02em;
+    color: #292929;
+    font-weight: 600;
+}
+
+.mi-about .choose_gift_coupon .txt {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    color: #595959;
+    font-weight: 300;
+}
+
+/* ==================== big_btn 섹션 ==================== */
+.mi-about .big_btn {
+    /* background는 테마 패치에서 관리 */
+    padding: 40px 0;
+}
+
+.mi-about .big_btn .container {
+    text-align: center;
+}
+
+.mi-about .big_btn .big_btn_lnk {
+    display: inline-block;
+    width: 250px;
+    padding: 30px 40px 25px;
+    border-radius: 40px;
+}
+
+.mi-about .big_btn .big_btn_lnk .t {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: #5b5b5b;
+    padding-right: 60px;
+}
+
+/* ==================== Footer ==================== */
+.mi-about #footer {
+    /* background는 테마 패치에서 관리 */
+    padding: 40px 0;
+}
+
+.mi-about #footer .business_info {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 30px;
+}
+
+.mi-about #footer .business_links {
+    margin-bottom: 20px;
+}
+
+.mi-about #footer .business_links a {
+    font-family: 'Freesentation', sans-serif;
+    color: #666666;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.mi-about #footer .business_links a:hover {
+    color: #292929;
+}
+
+.mi-about #footer .business_info p {
+    font-family: 'Freesentation', sans-serif;
+    color: #666666;
+    font-size: 13px;
+    margin: 8px 0;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+}
+
+/* ==================== 사이드 메뉴 ==================== */
+.mi-about .left_menu {
+    background: #F0EDE5;
+}
+
+.mi-about .left_menu .left_menu_in {
+    background: #F0EDE5;
+}
+
+.mi-about .left_menu .l_nav > li > a {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+    color: #595959;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: inline-block;
+}
+
+.mi-about .left_menu .l_nav_sub {
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.mi-about .left_menu .has-submenu.active .l_nav_sub {
+    display: block;
+}
+
+.mi-about .left_menu .l_nav_sub li a {
+    font-family: 'Freesentation', sans-serif;
+    font-size: 18px;
+    line-height: 35px;
+    color: #797979;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.mi-about .left_menu .l_nav_sub li a:hover {
+    color: #292929;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== 숨김 섹션 (죽은 섹션) ==================== */
+.mi-about .ms_bg_slr_over,
+.mi-about .leg_revival,
+.mi-about .mt_cards,
+.mi-about .moves_text {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ==================== 모바일 반응형 ==================== */
+@media (max-width: 768px) {
+    .mi-about .j_top .h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    .mi-about .j_top .txt {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    
+    .mi-about .srces_ovr .text-line {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .mi-about .srces_ovr .smaller-text {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .mi-about .bg_main {
+        margin: 30px 0;
+    }
+    
+    .mi-about .bg_main .lazy_bg {
+        min-height: 350px;
+    }
+    
+    .mi-about .ms_bg {
+        padding: 80px 0 48px;
+    }
+    
+    .mi-about .ms_bg .rows {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .mi-about .ms_bg .cols {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .mi-about .ms_bg .desc .d_img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        aspect-ratio: 420/570;
+        margin-bottom: 40px;  /* 모바일에서도 텍스트와 간격 확보 */
+    }
+    
+    .mi-about .ms_bg .desc .d_img img {
+        width: 100%;
+        height: 100%;
+        min-width: auto;
+        min-height: auto;
+    }
+    
+    .mi-about .ms_bg .section-header .main-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .mi-about .ms_bg .section-header .subtitle {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .mi-about .ms_bg .desc .h3 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 10px;
+    }
+    
+    .mi-about .ms_bg .desc .t {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+    
+    .mi-about .choose_gift_coupon .h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    .mi-about .choose_gift_coupon .txt {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .mi-about .big_btn .big_btn_lnk {
+        width: 90%;
+        max-width: 300px;
+        padding: 30px 20px 25px;
+    }
+    
+    .mi-about .big_btn .big_btn_lnk .t {
+        font-size: 24px;
+        line-height: 36px;
+        padding-right: 50px;
+    }
+    
+    .mi-about .mob_glry_rows {
+        background: #F0EDE5;
+    }
+}
+
+/* 태블릿 대응 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mi-about .ms_bg .rows {
+        gap: 20px;
+    }
+    
+    .mi-about .ms_bg .cols {
+        width: 300px;
+    }
+    
+    .mi-about .ms_bg .desc .d_img {
+        width: 280px;
+        height: 380px;
+    }
+    
+    .mi-about .ms_bg .desc .d_img img {
+        width: 280px;
+        height: 380px;
+        min-width: 280px;
+        min-height: 380px;
+    }
+}
+
+/* ============================================
+   테마 컬러 통합 패치 - 배경색 통일
+   ============================================ */
+
+/* === 0) 페이지 컬러 토큰 === */
+:root {
+    --page-bg: #F0EDE5;   /* 전체 배경(바탕색) - 베이지 */
+    --surface-bg: #FFFFFF; /* 카드/버튼 등 하얀 면이 필요한 곳 */
+}
+
+/* === 1) 문서 바탕을 먼저 칠한다 === */
+/* 섹션 margin 사이가 투명이라 부모가 비치므로, 상위 래퍼들 배경을 통일 */
+html, 
+body, 
+.scroller, 
+#wrap, 
+#wrapper {
+    background: var(--page-bg) !important;
+}
+
+/* === 2) '흰색 강제' 섹션을 테마로 통일 === */
+/* 지금 흰색 !important 때문에 끊겨 보이는 곳들을 모두 page-bg로 */
+.moves_text,
+.all_stock,
+.big_btn,
+#footer {
+    background: var(--page-bg) !important;
+}
+
+/* big_btn은 CTA이므로 흰색 서피스 유지 */
+.big_btn {
+    background: var(--surface-bg) !important;
+}
+
+/* === 3) 둥근 섹션(ms_bg) 모서리 비침 방지 === */
+.mi-about .ms_bg {
+    background-color: var(--page-bg) !important;
+    border-top-left-radius: 3000px !important;
+    border-top-right-radius: 3000px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    /* 내부 여백이 줄었을 때 잘림 방지 */
+    overflow: hidden; /* 둥근 모서리 밖으로 자식이 튀어나오지 않게 */
+}
+
+/* === 4) 컨테이너가 흰 배경을 갖고 있다면 투명으로 통일 === */
+.mi-about .j_top .container,
+.mi-about .ms_bg .container,
+.mi-about .choose_gift_coupon .container,
+.mi-about .big_btn .container,
+.mi-about #footer .container {
+    background: transparent !important;
+}
+
+/* === 5) 섹션 간 간격은 margin/padding으로만 관리 === */
+.mi-about section {
+    margin: 80px 0;
+}
+
+.mi-about .j_top {
+    margin-top: 0; /* 상단 히어로는 여백 없음 */
+}
+
+.mi-about .big_btn {
+    margin-bottom: 0; /* 하단 CTA는 여백 없음 */
+}
+
+/* === 6) 추가 보정: 특정 섹션들의 배경색 확실히 통일 === */
+.mi-about .glry_rows,
+.mi-about .mob_glry_rows,
+.mi-about .srces_ovr,
+.mi-about .choose_gift_coupon {
+    background: var(--page-bg) !important;
+}
+
+/* === 7) Footer 영역 특별 처리 === */
+.mi-about #footer {
+    background: var(--surface-bg) !important; /* Footer는 흰색 유지 */
+    padding: 40px 0;
+    margin-top: 0;
+}
+
+/* Footer 바로 위 big_btn과의 경계 처리 */
+.mi-about .big_btn {
+    padding-bottom: 60px !important; /* 하단 패딩 추가 */
+}
+
+/* === 8) 숨겨진 섹션들도 배경색 통일 (만약 다시 나타날 경우 대비) === */
+.mi-about .ms_bg_slr_over,
+.mi-about .leg_revival,
+.mi-about .mt_cards,
+.mi-about .moves_text {
+    background: var(--page-bg) !important;
+}
+
+/* === 10) ms_bg 섹션 텍스트 위치 안전 패치 - 카드와 텍스트 분리 === */
+/* 패럴랙스 아치는 그대로 유지하고 텍스트만 아래로 이동 */
+:root {
+    /* 기본값: 울트라와이드/4K (2560px 이상) */
+    --hero-text-offset: 350px;  /* 260px → 350px로 대폭 증가 */
+    --hero-text-gap: 200px;     /* 140px → 200px로 증가 */
+}
+
+/* FHD (1920px 이상 ~ 2559px 이하) */
+@media (max-width: 2559px) {
+    :root {
+        --hero-text-offset: 300px;  /* 220px → 300px */
+        --hero-text-gap: 160px;      /* 120px → 160px */
+    }
+}
+
+/* 노트북/태블릿 큰 화면 (1200px 이상 ~ 1919px 이하) */
+@media (max-width: 1919px) {
+    :root {
+        --hero-text-offset: 240px;  /* 180px → 240px */
+        --hero-text-gap: 130px;      /* 100px → 130px */
+    }
+}
+
+/* 태블릿 이하 */
+@media (max-width: 1200px) {
+    :root {
+        --hero-text-offset: 160px;  /* 120px → 160px */
+        --hero-text-gap: 100px;      /* 80px → 100px */
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --hero-text-offset: 80px;   /* 60px → 80px */
+        --hero-text-gap: 60px;       /* 48px → 60px */
+    }
+}
+
+.mi-about .ms_bg .section-header {
+    position: relative !important;
+    z-index: 1;
+    margin-top: var(--hero-text-offset) !important;
+    margin-bottom: var(--hero-text-gap) !important;
+}
+
+.mi-about .ms_bg .rows {
+    position: relative !important;
+    z-index: 2;
+}
+
+/* === 11) choose_gift_coupon 위치 수정 - 카드와 겹침 근본 해결 === */
+
+/* choose_gift_coupon을 화면 더 아래에서 시작 */
+.mi-about .choose_gift_coupon {
+    padding-top: clamp(320px, 14vw, 430px) !important; /* 2560px 기준 넉넉, 1920에서도 안정 */
+    margin-top: 0 !important;  /* 전역 section margin과 충돌 방지 */
+    position: relative;
+    z-index: 0;
+}
+
+/* 타이틀이 절대배치/변환으로 떠 있던 경우를 확실히 해제 */
+.mi-about .choose_gift_coupon .gf_ttl {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-top: 0 !important;  /* 섹션 상단 패딩만으로 제어 */
+    z-index: 0;
+}
+
+/* 레이어 관계 명확화: 카드(ms_bg) 위 / 다음 섹션 아래 */
+.mi-about .ms_bg { 
+    position: relative; 
+    z-index: 1; 
+}
+
+.mi-about .ms_bg .rows { 
+    position: relative; 
+    z-index: 2; 
+}
+
