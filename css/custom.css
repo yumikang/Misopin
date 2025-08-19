@@ -34,10 +34,110 @@ body, html {
     font-weight: 600 !important;
 }
 
-/* PC 메뉴 폰트 크기 증가 */
+/* PC 메뉴 폰트 크기 증가 및 색상 조정 */
 .header .main_menu .menu_list li a {
     font-size: 20px !important;
     line-height: 20px !important;
+    color: #2a2a2a !important; /* 진한 차콜 그레이로 변경 */
+    opacity: 1 !important;
+    font-weight: 600 !important; /* 약간 더 굵게 */
+}
+
+/* 메뉴 호버 시 색상 */
+.header .main_menu .menu_list li a:hover {
+    color: #000000 !important; /* 호버 시 완전 검정 */
+}
+
+/* book a treatment 버튼 텍스트 색상 조정 */
+.header .book_a_treatment a,
+.header .bat_lnk {
+    color: #2a2a2a !important; /* 진한 차콜 그레이 */
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+/* Card 버튼 텍스트 색상 조정 */
+.header .card_lnk .t {
+    color: #2a2a2a !important; /* 진한 차콜 그레이 */
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
+/* 드롭다운 하위 메뉴는 밝은 색상 유지 + 크기 조정 */
+.header .main_menu .sub-menu li a {
+    color: #ffffff !important; /* 흰색 유지 */
+    opacity: 0.9 !important;
+    font-weight: 400 !important; /* 일반 굵기 */
+    font-size: 14px !important; /* 폰트 크기 축소 */
+    line-height: 20px !important; /* 줄 높이 조정 */
+    white-space: nowrap !important; /* 텍스트 줄바꿈 방지 */
+}
+
+.header .main_menu .sub-menu li a:hover {
+    color: #ffffff !important;
+    opacity: 1 !important; /* 호버 시 완전 불투명 */
+}
+
+/* 드롭다운 메뉴 너비 조정 */
+.header .main_menu .sub-menu {
+    min-width: 140px !important; /* 최소 너비 설정 */
+    width: auto !important; /* 자동 너비 */
+}
+
+/* 모바일 사이드 메뉴 스타일 */
+.left_menu .l_nav > li > a {
+    color: #2a2a2a !important; /* 상위 메뉴 진한 색상 */
+    font-weight: 600 !important;
+    font-size: 18px !important;
+}
+
+/* 사이드 메뉴 하위 메뉴 스타일 */
+.left_menu .l_nav_sub {
+    background: rgba(0, 0, 0, 0.05) !important;
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+}
+
+.left_menu .l_nav_sub li a {
+    color: #555555 !important; /* 하위 메뉴는 중간 톤 */
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    padding: 8px 20px !important;
+}
+
+.left_menu .l_nav_sub li a:hover {
+    color: #000000 !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 모바일 헤더 고정 (스크롤 시에도 계속 보이도록) */
+@media (max-width: 768px) {
+    .header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 9999;
+        background: transparent !important; /* 배경 완전 투명 */
+        pointer-events: none; /* 헤더 영역 클릭 통과 */
+    }
+    
+    /* 로고와 햄버거 메뉴만 클릭 가능하도록 */
+    .header .logo,
+    .header .burger {
+        pointer-events: auto !important;
+    }
+    
+    /* 헤더가 fixed일 때 콘텐츠가 헤더 아래로 밀리도록 */
+    body {
+        padding-top: 60px !important;
+    }
+    
+    /* 헤더 내부 요소들이 제대로 보이도록 */
+    .header .header_in {
+        background: transparent !important;
+    }
 }
 
 /* h1_mst02_chng 스타일 - h1_mst02와 동일한 letter-spacing 적용 */

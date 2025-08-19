@@ -309,35 +309,109 @@
 		</div>
 				
 	</div>
-	<div class="left_menu lef_menu_w" style="opacity: 0">
+		<div class="left_menu lef_menu_w">
 	    <div class="left_menu_in">
-	        <img src="img/logo.svg" alt="" width="99" height="16" class="lf_logo">
+	        <img src="img/logo.svg" alt="미소핀의원" width="160" height="24" class="lf_logo">
 	        <div class="left_close_m"></div> 
 	        <div class="desc">
 	            <ul class="l_nav">
-	                <li><a href="about.html">소개</a></li>
-	                <!-- <li><a href="services.html">시술안내</a></li> -->
-	                <li><a href="masters.html">의료진</a></li>
-	                <li><a href="gallery.html">갤러리</a></li>
-	                <li><a href="blog.html">블로그</a></li>
-	                <li><a href="#">시술소개</a></li>
-	                <li><a href="#">연락처</a></li>
+	                <li class="has-submenu">
+                    <a href="#">미소핀 소개</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="mi_about.html">병원 소개</a></li>
+                        <li><a href="blog.html">이벤트/공지</a></li>
+                    </ul>
+                </li>
+	                <li class="has-submenu">
+                    <a href="#">주름/보톡스</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="blog-details-1.html">보톡스</a></li>
+                        <li><a href="blog-details-2.html">제오민</a></li>
+                    </ul>
+                </li>
+	                <li class="has-submenu">
+                    <a href="#">볼륨/리프팅</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="blog-details-3.html">필러</a></li>
+                        <li><a href="blog-details-4.html">스킨부스터</a></li>
+                        <li><a href="blog-details-5.html">리프팅</a></li>
+                    </ul>
+                </li>
+	                <li class="has-submenu">
+                    <a href="#">피부케어</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="blog-details-6.html">여드름치료</a></li>
+                        <li><a href="blog-details-7.html">필링</a></li>
+                    </ul>
+                </li>
+	                <li class="has-submenu">
+                    <a href="#">제거시술</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="blog-details-8.html">점</a></li>
+                        <li><a href="blog-details-9.html">비립종</a></li>
+                        <li><a href="blog-details-10.html">문신제거</a></li>
+                    </ul>
+                </li>
+	                <li class="has-submenu">
+                    <a href="#">바디케어</a>
+                    <ul class="l_nav_sub">
+                        <li><a href="blog-details-11.html">제모</a></li>
+                        <li><a href="blog-details-12.html">다이어트</a></li>
+                    </ul>
+                </li>
+	                <li><a href="#">예약</a></li>
 	            </ul>
 	            <div class="desc_btm">
-	                <!-- <div class="book_a_treatment">
-	                    <a href="#" class="bat_lnk">book a treatment</a>
-	                </div> -->
-	                <div class="card">
-	                    <a href="gift-card.html" class="card_lnk">
-	                        <span class="t">카드</span>
-	                        <span class="c"></span>
-	                    </a>
+	                <div class="clinic_hours" style="padding: 20px; background: rgba(255,255,255,0.3); border-radius: 10px; margin: 20px; border: 1px solid rgba(255,255,255,0.2);">
+	                    <h4 style="color: #1a1a1a; font-size: 18px; font-weight: 600; margin-bottom: 15px; text-align: center;">진료시간 안내</h4>
+	                    <div style="color: #333; font-size: 14px; line-height: 2; text-align: center;">
+	                        <p style="margin: 8px 0;"><strong>월/화/목/금:</strong> 08:30 - 19:30</p>
+	                        <p style="margin: 8px 0;"><strong>수요일:</strong> 08:30 - 12:00</p>
+	                        <p style="margin: 8px 0;"><strong>토요일:</strong> 09:00 - 14:00</p>
+	                        <p style="margin: 8px 0; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.1);"><strong>휴게시간:</strong> 12:00 - 14:00</p>
+	                        <p style="margin: 8px 0;"><strong>일요일/공휴일:</strong> 정기휴무</p>
+	                    </div>
 	                </div>
 	            </div>
 	        </div>    
 	    </div>
 	</div>
-	<div id="connect_with_us" class="hides win_popup">
+<style>
+/* 사이드 메뉴 드롭다운 스타일 */
+.left_menu .l_nav_sub {
+    display: none !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.left_menu .has-submenu.active .l_nav_sub {
+    display: block !important;
+}
+</style>
+<script>
+// 모바일 사이드 메뉴 드롭다운 기능
+document.addEventListener('DOMContentLoaded', function() {
+    // 메인 링크 클릭 시 서브메뉴 토글
+    const hasSubmenuLinks = document.querySelectorAll('.left_menu .has-submenu > a');
+    hasSubmenuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentLi = this.closest('.has-submenu');
+            
+            // 다른 열린 메뉴들을 닫기
+            document.querySelectorAll('.left_menu .has-submenu.active').forEach(item => {
+                if (item !== parentLi) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // 현재 메뉴 토글
+            parentLi.classList.toggle('active');
+        });
+    });
+});
+</script>
+<div id="connect_with_us" class="hides win_popup">
 	    <div class="win_popup_ovr">
 	        <div class="win_popup_in">
 	            <div class="line_pp">
