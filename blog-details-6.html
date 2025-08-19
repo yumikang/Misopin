@@ -662,6 +662,84 @@
 	        </div>    
 	    </div>
 	</div>
+<style>
+/* 사이드 메뉴 드롭다운 스타일 */
+.left_menu .l_nav_sub {
+    display: none !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* 서브메뉴 배경색 - 펼쳐졌을 때 */
+    background: rgba(0, 0, 0, 0.05) !important;
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+}
+
+.left_menu .has-submenu.active .l_nav_sub {
+    display: block !important;
+}
+
+/* 메인 메뉴 폰트 스타일 - custom.css와 일치 */
+.left_menu .l_nav > li > a {
+    color: #2a2a2a !important;
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    padding: 12px 15px !important;
+}
+
+/* 서브메뉴 폰트 스타일 - custom.css와 일치 */
+.left_menu .l_nav_sub li a {
+    color: #555555 !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    padding: 8px 20px !important;
+}
+
+/* 서브메뉴 호버 효과 */
+.left_menu .l_nav_sub li a:hover {
+    color: #000000 !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 진료시간 타이틀 폰트 */
+.clinic_hours h4 {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+}
+
+/* 진료시간 내용 폰트 */
+.clinic_hours p {
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+}
+
+.clinic_hours p strong {
+    font-weight: 600 !important;
+}
+</style>
+<script>
+// 모바일 사이드 메뉴 드롭다운 기능
+document.addEventListener('DOMContentLoaded', function() {
+    // 메인 링크 클릭 시 서브메뉴 토글
+    const hasSubmenuLinks = document.querySelectorAll('.left_menu .has-submenu > a');
+    hasSubmenuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const parentLi = this.closest('.has-submenu');
+            
+            // 다른 열린 메뉴들을 닫기
+            document.querySelectorAll('.left_menu .has-submenu.active').forEach(item => {
+                if (item !== parentLi) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // 현재 메뉴 토글
+            parentLi.classList.toggle('active');
+        });
+    });
+});
+</script>
 <div id="connect_with_us" class="hides win_popup">
 	    <div class="win_popup_ovr">
 	        <div class="win_popup_in">

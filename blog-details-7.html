@@ -39,6 +39,90 @@
     <link rel="stylesheet" href="blog-details-7-custom.css">
     <script defer src="js/jquery-3.6.0.min.js"></script>
     <script defer src="js/blog.min.js"></script>
+    <style>
+        /* 사이드 메뉴 드롭다운 스타일 */
+        .left_menu .l_nav_sub {
+            display: none !important;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.05) !important;
+            padding: 10px 0 !important;
+            margin-top: 10px !important;
+            border-radius: 5px !important;
+        }
+        
+        .left_menu .has-submenu.active .l_nav_sub {
+            display: block !important;
+        }
+        
+        /* 메인 메뉴 폰트 스타일 */
+        .left_menu .l_nav > li > a {
+            color: #2a2a2a !important;
+            font-weight: 600 !important;
+            font-size: 18px !important;
+            padding: 12px 15px !important;
+            line-height: 1.5 !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .left_menu .l_nav > li > a:hover {
+            color: #D4AF37 !important;
+            background: transparent !important;
+            transform: translateX(5px) !important;
+        }
+        
+        /* 서브메뉴 폰트 스타일 */
+        .left_menu .l_nav_sub li a {
+            color: #444 !important;
+            font-weight: 400 !important;
+            font-size: 16px !important;
+            padding: 8px 15px 8px 30px !important;
+            line-height: 1.4 !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .left_menu .l_nav_sub li a:hover {
+            color: #D4AF37 !important;
+            background: transparent !important;
+            padding-left: 35px !important;
+        }
+        
+        /* 활성 메뉴 스타일 - 노란색 배경 제거 */
+        .left_menu .l_nav > li.active > a {
+            color: #D4AF37 !important;
+            background: transparent !important;
+        }
+        
+        .left_menu .l_nav_sub li.active a {
+            color: #D4AF37 !important;
+            font-weight: 500 !important;
+            background: transparent !important;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 사이드 메뉴 드롭다운 기능
+            const hasSubmenuLinks = document.querySelectorAll('.left_menu .has-submenu > a');
+            
+            hasSubmenuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parentLi = this.closest('.has-submenu');
+                    const allSubmenuItems = document.querySelectorAll('.left_menu .has-submenu');
+                    
+                    // 다른 모든 서브메뉴 닫기
+                    allSubmenuItems.forEach(item => {
+                        if (item !== parentLi) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // 현재 서브메뉴 토글
+                    parentLi.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
