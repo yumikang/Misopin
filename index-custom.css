@@ -71,6 +71,73 @@
     }
 }
 
+/* 3개 이미지 영역 호버 효과 제거 - 처음부터 이미지 표시 */
+.itm_lnk .bg {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.itm_lnk:hover .bg,
+.itm_lnk .bg:hover {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* 스와이퍼 슬라이드의 불필요한 텍스트 숨기기 - 더 강력한 선택자 */
+.ph_slr_ovr .swiper-slide .txt .t,
+.ph_slr_ovr .swiper-slide .txt div.t,
+.ph_slr_ovr .swiper-slide .txt > .t,
+.ph_slr_ovr .swiper-wrapper .swiper-slide .txt .t,
+.ph_slr_ovr .swiper-wrapper .swiper-slide .txt div.t {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 첫 번째 슬라이드(김지식 원장)의 텍스트만 표시 */
+.ph_slr_ovr .swiper-slide:first-child .txt .t,
+.ph_slr_ovr .swiper-slide:first-child .txt div.t,
+.ph_slr_ovr .swiper-wrapper .swiper-slide:first-child .txt .t,
+.ph_slr_ovr .swiper-wrapper .swiper-slide:first-child .txt div.t {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* 김지식 원장이 아닌 다른 슬라이드의 모든 텍스트 요소 숨기기 */
+.ph_slr_ovr .swiper-slide:not(:first-child) .txt .h3,
+.ph_slr_ovr .swiper-slide:not(:first-child) .txt .t,
+.ph_slr_ovr .swiper-slide:not(:first-child) .txt div.t,
+.ph_slr_ovr .swiper-wrapper .swiper-slide:not(:first-child) .txt .h3,
+.ph_slr_ovr .swiper-wrapper .swiper-slide:not(:first-child) .txt .t,
+.ph_slr_ovr .swiper-wrapper .swiper-slide:not(:first-child) .txt div.t {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 특정 텍스트 내용 직접 타겟 (문제가 지속될 경우) */
+.ph_slr_ovr .swiper-slide .txt .t:contains("대한 비만미용학회"),
+.ph_slr_ovr .swiper-slide .txt .t:contains("정회원"),
+.ph_slr_ovr .swiper-slide .txt .t:contains("연세대학교") {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* JavaScript가 작동하지 않을 경우 추가 보완 */
+.ph_slr_ovr .swiper-slide:nth-child(n+2) .txt .t {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
 /* 원장 소개 섹션 스타일 */
 .director-introduction-section {
     padding: 120px 0;

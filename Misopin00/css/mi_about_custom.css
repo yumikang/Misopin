@@ -1,0 +1,843 @@
+/* mi_about.html 페이지 커스텀 스타일 */
+
+/* Wanted Sans 영어 폰트 */
+@import url('https://fastly.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
+/* Freesentation 폰트 - 다양한 weight 추가 */
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-1Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-7Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Freesentation';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* 기본 폰트 설정 - 한글은 Freesentation */
+.h2, .h3, .txt, .text-line {
+    font-family: 'Freesentation', sans-serif !important;
+}
+
+/* 영어 텍스트 전용 클래스 */
+.en-text {
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important;
+}
+
+/* 특정 영어 텍스트 선택자 */
+.subtitle, /* MISOPIN Special 등 */
+.main-menu a, /* 메뉴 링크 */
+.book_a_treatment a, /* book a treatment 버튼 */
+.card_lnk .t /* Card 텍스트 */ {
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important;
+}
+
+/* 두꺼운 텍스트는 font-weight 500 */
+.h2, .h3 {
+    font-weight: 500 !important;
+}
+
+/* 특정 텍스트 섹션 폰트 크기 30%로 줄이기 */
+.smaller-text {
+    font-size: 30% !important;
+    line-height: 1.3 !important;
+    font-family: 'Freesentation', sans-serif !important;
+}
+
+.text-line {
+    display: block !important;
+    margin-bottom: 0.1em !important;
+    font-family: 'Freesentation', sans-serif !important;
+    font-weight: 400 !important;
+}
+
+/* 마지막 두 줄 스크롤 시 색상 변경 */
+.text-line.last-lines {
+    color: #000000 !important;
+    text-shadow: 0 0 3px rgba(255,255,255,0.5) !important;
+}
+
+.h2 .st {
+    font-size: inherit !important;
+}
+
+/* j_top 섹션 배경색 변경 - 더 강력한 선택자 */
+.j_top,
+#wrapper .j_top,
+#wrap #wrapper .j_top,
+body .j_top {
+    background: #F0EDE5 !important;
+    background-color: #F0EDE5 !important;
+    padding: 60px 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* j_top container에도 배경색 적용 */
+.j_top .container {
+    background: #F0EDE5 !important;
+    background-color: #F0EDE5 !important;
+}
+
+/* j_top 텍스트 색상을 어두운 색으로 변경 (배경이 밝아졌으므로) */
+.j_top .h2 {
+    color: #595959 !important;
+    font-weight: 700 !important;
+    font-size: 90px !important;  /* 병원소개 텍스트 크기 조정 */
+    line-height: 120px !important;
+    letter-spacing: 0.15em !important;  /* 자간 조정 (음수값으로 좁게, 양수값으로 넓게) */
+}
+
+.j_top .txt {
+    color: #595959 !important;
+    font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif !important; /* 영어 텍스트이므로 Wanted Sans 적용 */
+    font-weight: 100 !important;
+    font-size: 18px !important;  /* 서브 텍스트 크기 조정 */
+    line-height: 28px !important;
+    letter-spacing: 0.05em !important;  /* 자간 조정 */
+}
+
+/* glry_rows 섹션 배경색 변경 */
+.glry_rows {
+    background: #F0EDE5 !important;
+}
+
+/* mob_glry_rows 섹션 배경색 변경 (모바일용) */
+.mob_glry_rows {
+    background: #F0EDE5 !important;
+}
+
+/* srces_ovr 섹션 배경색 변경 */
+.srces_ovr {
+    background: #F0EDE5 !important;
+}
+
+/* srces_ovr 섹션 텍스트 스타일 수정 */
+.srces_ovr .text-line,
+#wrapper .srces_ovr .text-line,
+#wrap #wrapper .srces_ovr .text-line {
+    font-family: 'Freesentation', sans-serif !important;
+    color: #595959 !important;
+    font-weight: 400 !important;
+    font-size: 44px !important;
+    line-height: 44px !important;
+    letter-spacing: 0.02em !important;
+    margin-bottom: 8px !important;
+}
+
+.srces_ovr .h2,
+#wrapper .srces_ovr .h2,
+#wrap #wrapper .srces_ovr .h2 {
+    font-family: 'Freesentation', sans-serif !important;
+    color: #595959 !important;
+    font-weight: 600 !important;
+    font-size: 48px !important;
+    line-height: 58px !important;
+    letter-spacing: 0.01em !important;
+}
+
+/* srces_ovr 섹션 smaller-text 스타일 */
+.srces_ovr .smaller-text,
+#wrapper .srces_ovr .smaller-text,
+#wrap #wrapper .srces_ovr .smaller-text {
+    font-family: 'Freesentation', sans-serif !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+/* srces_ovr 섹션 위치 조정 */
+.srces_ovr,
+#wrapper .srces_ovr,
+#wrap #wrapper .srces_ovr {
+    position: relative !important;
+    top: -150px !important; /* 텍스트를 위로 150px 올리기 */
+    transform: translateY(-150px) !important; /* 추가 보장을 위한 transform */
+    padding-bottom: 300px !important; /* 하단 패딩 추가로 여백 채우기 */
+    margin-bottom: -300px !important; /* 음수 마진으로 다음 요소와의 간격 조정, 2배로 하기 */
+}
+
+/* bg_main 섹션 텍스트 위치 조정 */
+.bg_main .bg_p,
+#wrapper .bg_main .bg_p,
+#wrap #wrapper .bg_main .bg_p {
+    position: relative !important;
+    top: -100px !important; /* 텍스트를 위로 100px 올리기 */
+    transform: translateY(-100px) !important; /* 추가 보장을 위한 transform */
+    padding-bottom: 200px !important; /* 하단 패딩 추가로 여백 채우기 */
+    margin-bottom: -200px !important; /* 음수 마진으로 다음 요소와의 간격 조정, 2배로 하기 */
+}
+
+/* ms_bg 섹션 배경색 변경 - 완전한 원형 라운딩 */
+.ms_bg {
+    background-color: #F0EDE5 !important;
+    /* about.min.css의 1920px 값을 더 큰 값으로 덮어쓰기 */
+    border-top-left-radius: 3000px !important;
+    border-top-right-radius: 3000px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    /* 추가 보장을 위한 border-radius 단축 속성 */
+    border-radius: 3000px 3000px 0 0 !important;
+    position: relative !important;
+    z-index: 3 !important;
+    margin-top: -1050px !important;
+    padding: 172px 0 100px !important;
+    overflow: hidden !important;
+}
+
+/* ms_bg 섹션 - 더욱 구체적인 선택자로 강제 적용 */
+#wrapper .ms_bg,
+#wrap #wrapper .ms_bg {
+    background-color: #F0EDE5 !important;
+    border-top-left-radius: 3000px !important;
+    border-top-right-radius: 3000px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 3000px 3000px 0 0 !important;
+    position: relative !important;
+    top: -70px !important; /* ms_bg 섹션을 위로 100px 올리기 */
+    transform: translateY(-70px) !important; /* 추가 보장을 위한 transform */
+    padding-bottom: 200px !important; /* 하단 패딩 추가로 여백 채우기 */
+    margin-bottom: -200px !important; /* 음수 마진으로 다음 요소와의 간격 조정 */
+}
+
+/* ms_bg 섹션 헤더 스타일 */
+.ms_bg .section-header {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+}
+
+.ms_bg .section-header .subtitle {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    color: #999999 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 15px !important;
+}
+
+.ms_bg .section-header .main-title {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 32px !important;  /* 폰트 사이즈 줄이기 42px -> 32px */
+    font-weight: 600 !important;
+    color: #292929 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.4 !important;
+}
+
+/* 더 강력한 선택자로 덮어쓰기 */
+.ms_bg .container .section-header h2.main-title,
+#wrapper .ms_bg .container .section-header h2.main-title,
+#wrap #wrapper .ms_bg .container .section-header h2.main-title {
+    font-size: 50px !important;
+    line-height: 1.4 !important;
+    font-family: 'Freesentation', sans-serif !important;
+    font-weight: 600 !important;
+    color: #292929 !important;
+}
+
+/* ms_bg 섹션 텍스트 스타일 조정 */
+.ms_bg .h2,
+#wrapper .ms_bg .h2,
+#wrap #wrapper .ms_bg .h2 {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 120px !important;
+    line-height: 90px !important;
+    letter-spacing: 0.02em !important;
+    color: #595959 !important;  
+    font-weight: 600 !important;
+}
+
+.ms_bg .txt,
+#wrapper .ms_bg .txt,
+#wrap #wrapper .ms_bg .txt {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+    letter-spacing: 0.03em !important;
+    color: #595959 !important;  
+    font-weight: 400 !important;
+}
+
+.ms_bg .h3,
+#wrapper .ms_bg .h3,
+#wrap #wrapper .ms_bg .h3 {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 36px !important;
+    line-height: 42px !important;
+    letter-spacing: 0.01em !important;
+    color: #595959 !important;  
+    font-weight: 500 !important;
+}
+
+.ms_bg .desc .h3,
+#wrapper .ms_bg .desc .h3,
+#wrap #wrapper .ms_bg .desc .h3 {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 32px !important;  /* 텍스트 크기도 증가 */
+    line-height: 40px !important;
+    letter-spacing: 0.01em !important;
+    color: #292929 !important;  
+    font-weight: 600 !important;
+    margin-bottom: 20px !important;
+}
+
+/* ms_bg 카드 레이아웃 조정 - 1.5배 크기에 맞춤 */
+.ms_bg .rows {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 30px !important;  /* 간격 늘림 */
+    align-items: flex-start !important;
+    max-width: 1600px !important;  /* 최대 너비 제한 */
+    margin: 0 auto !important;
+}
+
+.ms_bg .cols {
+    flex: none !important;
+    width: 450px !important;  /* 300px * 1.5 = 450px */
+    text-align: center !important;
+    padding: 0 10px !important; /* 패딩도 조금 늘림 */
+}
+
+/* about.min.css의 기본 패딩 덮어쓰기 */
+.ms_bg .rows .cols {
+    padding: 0 10px !important;  /* 1.5배 크기에 맞춰 패딩 조정 */
+}
+
+.ms_bg .desc {
+    padding: 0 !important; /* 패딩 제거로 간격 축소 */
+}
+
+/* ms_bg_slr_over 섹션 완전히 숨기기 (PC/모바일 모두) */
+.ms_bg_slr_over {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* leg_revival 섹션 완전히 숨기기 (PC/모바일 모두) */
+.leg_revival {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* mt_cards 섹션 완전히 숨기기 (PC/모바일 모두) */
+.mt_cards {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* moves_text 섹션 완전히 숨기기 (PC/모바일 모두) */
+.moves_text {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* ms_bg 이미지 완전 고정 레이아웃 - 1.5배 크기 */
+.ms_bg .desc .d_img {
+    width: 420px !important;  /* 280px * 1.5 = 420px */
+    height: 570px !important;  /* 380px * 1.5 = 570px */
+    margin: 0 auto 25px auto !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+    display: block !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+.ms_bg .desc .d_img img {
+    width: 420px !important;  /* 280px * 1.5 = 420px */
+    height: 570px !important;  /* 380px * 1.5 = 570px */
+    object-fit: cover !important;
+    object-position: center center !important;
+    border-radius: 0 !important;
+    display: block !important;
+    max-width: none !important;
+    min-width: 420px !important;
+    min-height: 570px !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    clip-path: none !important;
+}
+
+.ms_bg .desc .t {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 20px !important;  /* 텍스트 크기 증가 */
+    line-height: 30px !important;
+    color: #666666 !important;
+    font-weight: 400 !important;
+}
+
+/* choose_gift_coupon 섹션 배경색 변경 */
+.choose_gift_coupon {
+    background: #F0EDE5 !important;
+}
+
+/* choose_gift_coupon 섹션 텍스트 스타일 조정 */
+.choose_gift_coupon .h2 {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 70px !important;
+    line-height: 80px !important;
+    letter-spacing: 0.02em !important;
+    color: #292929 !important;
+    font-weight: 600 !important;
+}
+
+.choose_gift_coupon .txt {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 26px !important;
+    letter-spacing: 0.03em !important;
+    color: #595959 !important;
+    font-weight: 300 !important;
+}
+
+/* srces_ovr 섹션 추가 텍스트 스타일 조정 */
+.srces_ovr .smaller-text {
+    font-size: 40px !important;  /* 30%에서 더 구체적인 크기로 변경 */
+    line-height: 40px !important;
+    letter-spacing: 0.05em !important;
+}
+
+.srces_ovr .st {
+    font-size: 60px !important;
+    line-height: 70px !important;
+    letter-spacing: 0.02em !important;
+    color: #292929 !important;
+    font-weight: 700 !important;
+}
+
+/* moves_text 섹션 배경색 변경 */
+.moves_text {
+    background: #FFFFFF !important;
+}
+
+/* all_stock 섹션 배경색 변경 (moves_text와 연결된 섹션) */
+.all_stock {
+    background: #FFFFFF !important;
+}
+
+/* big_btn 섹션 배경색 변경 (moves_text와 연결된 섹션) */
+.big_btn {
+    background: #FFFFFF !important;
+    padding: 40px 0 !important;  /* 위아래 패딩 줄이기 */
+}
+
+/* big_btn 버튼 크기 축소 및 가운데 정렬 */
+.big_btn .container {
+    text-align: center !important;
+}
+
+.big_btn .big_btn_lnk {
+    display: inline-block !important;
+    width: 250px !important;  /* 버튼 너비 제한 */
+    padding: 30px 40px 25px !important;  /* 패딩 줄이기 */
+    border-radius: 40px !important;  /* 모서리 둥글기 줄이기 */
+}
+
+.big_btn .big_btn_lnk .t {
+    font-family: 'Freesentation', sans-serif !important;  /* 한글 폰트 적용 */
+    font-size: 30px !important;  /* 텍스트 크기 줄이기 */
+    line-height: 48px !important;
+    font-weight: 500 !important;  /* 폰트 두께 조정 */
+    letter-spacing: 0.05em !important;  /* 자간 조정 */
+    color: #5b5b5b !important;  /* 텍스트 색상 */
+    padding-right: 60px !important;  /* 화살표 공간 줄이기 */
+}
+
+.big_btn .big_btn_lnk .t::after {
+    width: 40px !important;  /* 화살표 크기 줄이기 */
+    height: 25px !important;
+    top: 8px !important;
+    right: 10px !important;
+}
+
+/* footer 영역 배경색 변경 */
+#footer {
+    background: #FFFFFF !important;
+    padding: 40px 0 !important;
+}
+
+/* footer 비즈니스 정보 스타일 */
+#footer .business_info {
+    text-align: center !important;
+    padding: 30px 0 !important;
+    border-top: 1px solid #e5e5e5 !important;
+    margin-bottom: 30px !important;
+}
+
+#footer .business_links {
+    margin-bottom: 20px !important;
+}
+
+#footer .business_links a {
+    font-family: 'Freesentation', sans-serif !important;
+    color: #666666 !important;
+    text-decoration: none !important;
+    margin: 0 15px !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em !important;
+}
+
+#footer .business_links a:hover {
+    color: #292929 !important;
+}
+
+#footer .business_info p {
+    font-family: 'Freesentation', sans-serif !important;
+    color: #666666 !important;
+    font-size: 13px !important;
+    margin: 8px 0 !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.6 !important;
+}
+
+/* moves_text 섹션 mt_cols 텍스트 스타일 */
+.moves_text .mt_cols .t,
+#wrapper .moves_text .mt_cols .t,
+#wrap #wrapper .moves_text .mt_cols .t {
+    font-family: 'Freesentation', sans-serif !important;
+    font-weight: 700 !important; /* 굵게 */
+    font-size: 24px !important; /* 크기 조정 */
+    color: #292929 !important; /* 진한 색상 */
+    letter-spacing: 0.02em !important;
+}
+
+/* footer 하단 정보 스타일 */
+#footer .f_rows {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding-top: 20px !important;
+    border-top: 1px solid #f0f0f0 !important;
+}
+
+#footer .f_rows .cols {
+    font-family: 'Freesentation', sans-serif !important;
+}
+
+#footer .f_rows .cols p {
+    color: #999999 !important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.02em !important;
+    margin: 5px 0 !important;
+}
+
+#footer .f_rows .cols a {
+    color: #999999 !important;
+    text-decoration: none !important;
+}
+
+#footer .f_rows .cols a:hover {
+    color: #666666 !important;
+}
+
+/* 모바일 사이드 메뉴 스타일 */
+.left_menu {
+    background: #F0EDE5 !important;  /* 베이지 배경색 */
+}
+
+.left_menu .left_menu_in {
+    background: #F0EDE5 !important;  /* 베이지 배경색 */
+}
+
+.left_menu .l_nav > li {
+    position: relative !important;
+}
+
+.left_menu .l_nav > li > a {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 24px !important;
+    line-height: 40px !important;
+    color: #595959 !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    display: inline-block !important;
+}
+
+/* 서브메뉴 스타일 */
+.left_menu .l_nav_sub {
+    display: none !important;
+    list-style: none !important;
+    padding: 10px 0 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+.left_menu .has-submenu.active .l_nav_sub {
+    display: block !important;
+}
+
+.left_menu .l_nav_sub li a {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 18px !important;
+    line-height: 35px !important;
+    color: #797979 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.01em !important;
+    display: block !important;
+    padding: 5px 0 !important;
+    text-align: center !important;
+}
+
+.left_menu .l_nav_sub li a:hover {
+    color: #292929 !important;
+    transition: all 0.3s ease !important;
+    background: rgba(0,0,0,0.05) !important;
+}
+
+.left_menu .card .card_lnk .t {
+    font-family: 'Freesentation', sans-serif !important;
+    font-size: 18px !important;
+    color: #595959 !important;
+}
+
+/* ==================== 모바일 반응형 스타일 ==================== */
+@media (max-width: 768px) {
+    /* ms_bg_slr_over 섹션 숨기기 - PC에서처럼 */
+    .ms_bg_slr_over {
+        display: none !important;
+    }
+    
+    /* mob_glry_rows 섹션 배경색 강제 적용 */
+    .mob_glry_rows {
+        background: #F0EDE5 !important;
+        background-color: #F0EDE5 !important;
+    }
+    
+    /* srces_ovr 텍스트 모바일 대응 */
+    .srces_ovr .text-line,
+    #wrapper .srces_ovr .text-line,
+    #wrap #wrapper .srces_ovr .text-line {
+        font-size: 24px !important;  /* 44px -> 24px */
+        line-height: 32px !important;
+        letter-spacing: 0.01em !important;
+    }
+    
+    .srces_ovr .smaller-text {
+        font-size: 20px !important;  /* 40px -> 20px */
+        line-height: 28px !important;
+    }
+    
+    /* bg_main 배경 이미지 모바일 대응 */
+    .bg_main .lazy_bg {
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    /* ms_bg 카드 레이아웃 모바일 대응 */
+    .ms_bg .rows {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 40px !important;
+    }
+    
+    .ms_bg .cols {
+        width: 100% !important;
+        max-width: 350px !important;
+    }
+    
+    .ms_bg .desc .d_img {
+        width: 100% !important;
+        max-width: 350px !important;
+        height: auto !important;
+        aspect-ratio: 420/570 !important;
+    }
+    
+    .ms_bg .desc .d_img img {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
+        min-height: auto !important;
+    }
+    
+    /* ms_bg 텍스트 크기 조정 */
+    .ms_bg .section-header .main-title,
+    #wrapper .ms_bg .section-header .main-title,
+    #wrap #wrapper .ms_bg .section-header .main-title,
+    .ms_bg .container .section-header h2.main-title,
+    #wrapper .ms_bg .container .section-header h2.main-title,
+    #wrap #wrapper .ms_bg .container .section-header h2.main-title {
+        font-size: 24px !important;  /* 모바일에서 24px */
+        line-height: 32px !important;
+        letter-spacing: 0.01em !important;
+    }
+    
+    .ms_bg .section-header .subtitle {
+        font-size: 18px !important;  /* 18px -> 16px로 조정 */
+        line-height: 22px !important;
+        letter-spacing: 0.08em !important;
+    }
+    
+    .ms_bg .desc .h3,
+    #wrapper .ms_bg .desc .h3,
+    #wrap #wrapper .ms_bg .desc .h3 {
+        font-size: 22px !important;
+        line-height: 32px !important;
+        margin-bottom: 10px !important;  /* h3 아래 간격 조정 */
+    }
+    
+    .ms_bg .desc .t {
+        font-size: 16px !important;
+        line-height: 24px !important;
+        margin-top: 10px !important;  /* 텍스트 위 간격 조정 */
+    }
+    
+    /* j_top 배경색 모바일에서도 강제 적용 */
+    .j_top,
+    #wrapper .j_top,
+    #wrap #wrapper .j_top {
+        background: #F0EDE5 !important;
+        background-color: #F0EDE5 !important;
+    }
+    
+    /* j_top 텍스트 모바일 대응 */
+    .j_top .h2 {
+        font-size: 48px !important;
+        line-height: 60px !important;
+        letter-spacing: 0.05em !important;
+    }
+    
+    .j_top .txt {
+        font-size: 14px !important;
+        line-height: 22px !important;
+    }
+    
+    /* choose_gift_coupon 텍스트 모바일 대응 */
+    .choose_gift_coupon .h2,
+    .choose_gift_coupon .gf_ttl .h2 {
+        font-size: 28px !important;  /* 36px -> 28px로 줄임 */
+        line-height: 36px !important;
+        letter-spacing: 0.02em !important;
+    }
+    
+    .choose_gift_coupon .txt,
+    .choose_gift_coupon .gf_ttl .txt {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        letter-spacing: 0.01em !important;
+    }
+    
+    /* big_btn 모바일 대응 */
+    .big_btn .big_btn_lnk {
+        width: 90% !important;
+        max-width: 300px !important;
+        padding: 30px 20px 25px !important;
+    }
+    
+    .big_btn .big_btn_lnk .t {
+        font-size: 24px !important;
+        line-height: 36px !important;
+        padding-right: 50px !important;  /* 화살표 공간 확보 */
+        position: relative !important;
+        display: inline-block !important;
+        text-align: center !important;
+    }
+    
+    /* big_btn 화살표 모바일 대응 - 기존 애니메이션 유지 */
+    .big_btn .big_btn_lnk .t .a,
+    .big_btn .big_btn_lnk .t span.a {
+        position: absolute !important;
+        width: 25px !important;  /* 모바일용 크기 */
+        height: 18px !important;
+        right: 15px !important;  /* 오른쪽 여백 조정 */
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        display: inline-block !important;
+    }
+    
+    /* srces_ovr 위치 조정 모바일에서는 리셋 */
+    .srces_ovr,
+    #wrapper .srces_ovr,
+    #wrap #wrapper .srces_ovr {
+        top: 0 !important;
+        transform: translateY(-200px) !important;
+        padding: 5px 0 300px 0 !important;  /* 상단 30px, 하단 20px로 줄임 */
+        margin-bottom: -200px !important;
+    }
+    
+    /* bg_main 텍스트 위치 모바일에서는 리셋 */
+    .bg_main .bg_p,
+    #wrapper .bg_main .bg_p,
+    #wrap #wrapper .bg_main .bg_p {
+        top: 0 !important;
+        transform: none !important;
+        padding: 30px 20px !important;  /* 상하 30px, 좌우 20px */
+        margin-bottom: 0 !important;
+    }
+    
+    /* bg_main 섹션 모바일 여백 조정 */
+    .bg_main {
+        margin-bottom: -50px !important;  /* 하단 여백 줄이기 */
+    }
+    
+    /* ms_bg 위치 조정 모바일에서는 리셋 */
+    #wrapper .ms_bg,
+    #wrap #wrapper .ms_bg {
+        top: 0 !important;
+        transform: none !important;
+        margin-top: -200px !important;
+        padding: 100px 0 60px !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* 태블릿 대응 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ms_bg .rows {
+        gap: 20px !important;
+    }
+    
+    .ms_bg .cols {
+        width: 300px !important;
+    }
+    
+    .ms_bg .desc .d_img {
+        width: 280px !important;
+        height: 380px !important;
+    }
+    
+    .ms_bg .desc .d_img img {
+        width: 280px !important;
+        height: 380px !important;
+        min-width: 280px !important;
+        min-height: 380px !important;
+    }
+}

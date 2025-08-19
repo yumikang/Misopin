@@ -1,0 +1,13 @@
+<svg width="160" height="24" viewBox="0 0 160 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'SUIT-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+  </defs>
+  <text x="0" y="18" font-family="'SUIT-Regular', sans-serif" font-size="18" font-weight="normal" fill="#ffffff">미소핀의원</text>
+</svg>

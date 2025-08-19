@@ -154,18 +154,28 @@
 
 /* 섹션 기본 스타일 */
 .section-padding {
-    padding: 60px 0;
+    padding: 20px 0;
 }
 
 .section-padding-large {
-    padding: 80px 0;
+    padding: 30px 0;
 }
 
 /* 섹션 사이 간격 조정 - 개별 조정 가능 */
 /* 기본 간격 설정 */
 .bd_bg {
-    margin-bottom: 100px !important;
+    margin-bottom: 30px !important;
 }
+
+/* 텍스트+이미지 섹션(.bd_bg.section-padding) → 바로 뒤가 아코디언(.accordion-section)일 때만 간격 타이트 */
+.bd_bg.section-padding:has(+ .accordion-section) {
+    margin-bottom: 50px !important; /* 데스크톱 권장 60px */
+  }
+  
+  /* 위 규칙과 짝: 아코디언 섹션의 상단 여백은 0으로 정리 */
+  .bd_bg.section-padding + .accordion-section {
+    margin-top: 0; /* 혹시 margin-top이 있으면 제거 */
+  }
 
 /* 카드 컨테이너 하단 간격 직접 조정 */
 .card-container {
@@ -735,7 +745,7 @@
 .image-accordion-grid {
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin-top: 40px;
     gap: 8px;
 }

@@ -1,0 +1,470 @@
+/* 전체 배경색 통일 */
+body,
+.scroller,
+#wrap,
+#wrapper {
+    background-color: #F4F8FC !important;
+}
+
+/* 섹션 배경색 */
+.bd_desc,
+.bd_bg,
+.j_ttl_s,
+.nav_bd,
+.trio_itms {
+    background-color: #F4F8FC !important;
+}
+
+/* 스크롤 확대 효과 */
+.scroll-zoom {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-zoom-in {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s;
+}
+
+/* 섹션 기본 스타일 */
+.section-padding {
+    padding: 60px 0;
+}
+
+.section-padding-large {
+    padding: 80px 0;
+}
+
+/* 컨테이너 스타일 */
+.content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content-container-wide {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.container-relative {
+    position: relative;
+    z-index: 2;
+}
+
+/* 플렉스 레이아웃 */
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+/* 텍스트 스타일 */
+.section-subtitle {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle-gold {
+    color: #d4af37;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section-subtitle-white {
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    color: #333;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.section-title-white {
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.section-title-xlarge {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.section-title-medium {
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 30px;
+}
+
+.section-text {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.section-text-small {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.section-text-white {
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.section-text-white-bright {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.text-no-margin {
+    margin-bottom: 0 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-margin-large {
+    margin-bottom: 80px;
+}
+
+.text-margin-top {
+    margin-top: 20px;
+}
+
+/* 이미지 스타일 */
+.rounded-image {
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.circle-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 플렉스 아이템 스타일 */
+.flex-item-600 {
+    flex: 0 1 600px;
+}
+
+.flex-item-700 {
+    flex: 0 1 700px;
+}
+
+/* 카드 스타일 */
+.card-container {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.age-card {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.card-image {
+    margin-bottom: 30px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* 배너 섹션 */
+.gradient-banner {
+    background: linear-gradient(135deg, #1e71d0 0%, #bcd8f8 70%);
+    padding: 80px 0;
+    color: white;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.banner-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.banner-visual {
+    flex: 1;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* 시술단계 스타일 */
+.procedure-header {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.procedure-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.procedure-step {
+    text-align: center;
+}
+
+.procedure-step h3 {
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.procedure-step p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.procedure-step p.mb-8 {
+    margin-bottom: 8px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.step-image {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.step-badge {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    background: #d4af37;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 이미지 배너 섹션 */
+.image-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    position: relative;
+}
+
+.banner-description {
+    margin-top: 40px;
+}
+
+/* 기타 스타일 */
+.footer-spacer {
+    height: 150px;
+    background-color: #F4F8FC;
+}
+
+.full-width {
+    width: 100%;
+    height: auto;
+}
+
+.svg-graph {
+    width: 100%;
+    height: auto;
+}
+
+/* 푸터 스타일 */
+.footer-bg {
+    background-color: #F4F8FC !important;
+}
+
+.footer-info {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-text {
+    color: #666;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+.banner-text-center {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .section-padding {
+        padding: 40px 0 !important;
+    }
+    
+    .section-padding-large {
+        padding: 60px 0 !important;
+    }
+    
+    .content-container,
+    .content-container-wide {
+        padding: 0 20px !important;
+    }
+    
+    .flex-container {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    
+    .section-title {
+        font-size: 28px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .section-title-medium {
+        font-size: 24px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .section-text {
+        font-size: 16px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .section-text-small {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .card-container {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    
+    .card-image img {
+        height: 250px !important;
+    }
+    
+    .banner-content {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    
+    .procedure-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+    
+    .circle-image {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .step-badge {
+        top: -5px !important;
+        right: 5px !important;
+        padding: 6px 12px !important;
+        font-size: 10px !important;
+    }
+    
+    .image-banner {
+        padding: 60px 0 !important;
+    }
+}

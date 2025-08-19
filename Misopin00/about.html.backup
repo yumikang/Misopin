@@ -1,0 +1,733 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <title>미소핀의원 - 소개</title>
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Black.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Bold.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Book.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Light.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Medium.woff2"> 
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Regular.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-SemiBold.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Thin.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/SuisseIntl/SuisseIntl-Ultralight.woff2">
+    <link rel="preload" as="font" crossorigin="crossorigin" type="font/woff2" href="fonts/Gallient/Gallient.woff2">
+
+    <link rel="preload" href="css/lib.min.css" as="style">
+    <link rel="preload" href="css/about.min.css" as="style">
+    <link rel="preload" href="js/jquery-3.6.0.min.js" as="script">
+    <link rel="preload" href="js/about.min.js" as="script">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest.html">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="미소핀의원">
+    <meta name="keywords" content="미소핀의원">
+    
+    <!-- <link rel="stylesheet" href="css/fonts.css"> -->
+    <link rel="stylesheet" href="css/lib.min.css" media="(min-width: 320px)">
+    <link rel="stylesheet" href="css/about.min.css" media="(min-width: 320px)">
+    <style>
+    .header,
+    .header.header_b,
+    #header {
+        background-image: url(img/miso.jpg) !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        min-height: 100vh !important;
+        position: relative !important;
+    }
+    
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
+    
+    .header_in {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    
+    /* 미소핀 소개 섹션 숨기기 (헤더로 이동했으므로) */
+    .j_top {
+        display: none !important;
+    }
+    
+    /* 하단 moves_text 배경색 변경 */
+    .moves_text {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 푸터 배경색도 동일하게 변경 */
+    #footer {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 지금 예약 버튼 영역 배경색 변경 */
+    .big_btn {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 이벤트 보기 버튼 영역 배경색 변경 */
+    .all_stock {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 페이스 리프팅, 코어 톡스 섹션 배경색 변경 */
+    .ms_bg {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* 지친 나에게 주는 완벽한 선물 섹션 배경색 변경 */
+    .choose_gift_coupon {
+        background-color: #F4F8FC !important;
+    }
+    
+    /* ESTHETICS. UNIQUE 섹션 배경색 변경 */
+    .bg_main {
+        background-color: #E9F0F8 !important;
+    }
+    
+    /* Unique & exclusive 텍스트 섹션 배경색 변경 */
+    .srces_ovr {
+        background-color: #E9F0F8 !important;
+    }
+    
+    /* 하단 텍스트 색상 진하게 변경 */
+    .dsc_btm p {
+        color: #2C3E50 !important;  /* 짙은 네이비 회색 */
+        font-weight: 600 !important;
+    }
+    
+    /* 이벤트 보기 버튼 텍스트 색상 */
+    .all_stock_lnk {
+        color: #34495E !important;  /* 짙은 회색 */
+        font-weight: 600 !important;
+    }
+    
+    /* 지금 예약 버튼 텍스트 색상 */
+    .big_btn_lnk .t {
+        color: #2C3E50 !important;  /* 짙은 네이비 회색 */
+        font-weight: 600 !important;
+    }
+    </style>
+    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/about.min.js"></script>
+</head>
+
+<body>
+	<div class="scroller">
+		<div id="wrap">
+			<div id="wrapper">
+				<div id="header" class="header">
+					<div class="header_in">
+						<div class="container">
+							<div class="rows">
+								<div class="cols cols01">
+									<div class="logo">
+										<a href="index.html"><img src="img/logo.svg" width="98" height="16" alt="" title=""></a>
+									</div>
+								</div>
+								<div class="cols cols02">
+									<div class="main_menu">
+										<ul class="menu_list">
+											<li><a href="about.html">미소핀</a></li>
+											<!-- <li><a href="services.html">시술안내</a></li> -->
+											<li><a href="blog.html">이벤트/공지사항</a></li>
+											<li><a href="gallery.html">내부사진</a></li>
+                                            <!-- <li><a href="masters.html">의료진 소개</a></li> -->
+                                            <li><a href="blog-details-1.html">시술소개</a></li>
+											<li><a href="#">예약 페이지</a></li>
+										</ul> 
+									</div>	
+								</div>
+								<div class="cols cols04">
+									<div class="book_a_treatment">
+										<a href="#" class="e_win_lnk bat_lnk">예약하기</a>
+									</div>
+									<div class="card">
+										<a href="#" class="card_lnk">
+											<span class="t">Card</span>
+											<span class="c"></span>
+										</a>
+									</div>
+								</div>
+								<div class="cols cols05"> 
+									<div class="burger">
+										<button class="burger_btn">
+											<span></span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- 헤더 안에 미소핀 소개 텍스트 추가 -->
+						<div class="header_content" style="position: absolute; top: 700%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; z-index: 3;">
+							<div class="h2" style="font-size: 3rem; margin-bottom: 20px; font-weight: bold;">미소핀 소개</div>
+							<div class="txt" style="font-size: 1.2rem; max-width: 600px;">
+								미소핀의 아름다움을 위한 노력, <br>고유하고 독자적인 개인 맞춤형 솔루션 제공합니다.
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="srces_ovr">
+					<div class="container">
+						<div class="srces">
+							<div class="h2 t_split">
+								<span class="st st01"></span>Unique
+								<span class="br">& exclusive</span>
+								<span class="br">Dermafit</span>
+								Effort for beauty<span class="st st02"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="bg_main">
+					<div class="lazy_bg back_bg" data-background-image="img/back_layer_eco.png">
+						<div class="lazy_bg front_bg" data-background-image="img/front_layer_eco.png">
+						</div>
+						<div class="bg_p">
+							<span class="h2b">Personalized Aesthetics. Uniquely Yours.</span> 
+						</div>
+					</div>
+				</div>
+				
+				<div class="ms_bg">
+					<div class="container">
+						<div class="h2">
+							<!-- <div class="leaf leaf01"></div>
+							<div class="leaf leaf02"></div> -->
+							<div class="t">
+								대표시술</span>
+							</div>
+						</div>
+						<div class="txt up">
+							미소핀의원은 최신 의료 기술과 따뜻한 마음을 담아 당신의 아름다운 피부를 되찾아 드립니다. 풍부한 임상 경험을 바탕으로 개인별 맞춤 치료를 제공하며, 편안하고 안전한 환경에서 최상의 의료 서비스를 경험하실 수 있습니다.
+						</div>
+						<div class="rows">
+							<div class="cols cols01">
+								<div class="desc">
+									<div class="h3 t_split">
+										페이스 
+										<span class="br">리프팅</span>
+									</div>
+									<div class="d_img up">
+										<img src="img/a_DSC08202.jpg" width="214" height="317" alt="">
+									</div>
+									<div class="t up">미소핀의 시그니처, 리프팅 필러 패키지로 가장 고급스러운 아름다움을 경험하세요.
+										단 하나의 시술로 얼굴의 균형과 볼륨을 섬세하게 되살립니다.</div>
+								</div>
+							</div>
+							<div class="cols cols02">
+								<div class="desc">
+									<div class="h3 t_split">
+										코어
+										<span class="br">톡스</span>
+									</div>
+									<div class="d_img up">
+										<img src="img/a_DSC08228.jpg" width="214" height="317" alt="">
+									</div>
+									<div class="t up">미소핀의 리쥬란 시술은 손상된 피부의 재생력을 끌어올려
+										건강하고 생기 있는 피부로 회복시켜 드립니다.
+										민감성 피부부터 노화 피부까지, 피부 상태에 맞춘 맞춤형 솔루션을 제공합니다.
+									</div>
+								</div>
+							</div>
+							<div class="cols cols03">
+								<div class="desc">
+									<div class="h3 t_split">
+										모공
+										<span class="br">축소</span>
+									</div>
+									<div class="d_img up">
+										<img src="img/a_DSC08199.jpg" width="214" height="317" alt="">
+									</div>
+									<div class="t up">탄력 개선과 윤곽 리프팅을 동시에!
+										미소핀의 코레지 시술은 피부 깊숙이 작용하여
+										자연스럽고 또렷한 얼굴선을 선사합니다.
+										함께 시술 가능한 커플 프로그램도 준비되어 있어,
+										소중한 사람과 함께 아름다움을 나눌 수 있습니다.
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ms_bg_slr_over">
+							<div class="swiper pfo_slr">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="caption">
+											<div class="h3">리프팅 필러</div>
+											<div class="bg">
+												<div class="bg_in" style="background-image: url(img/pn24.png);"></div>
+											</div>
+											<p>미소핀의 시그니처, 리프팅 필러 패키지로 가장 고급스러운 아름다움을 경험하세요.
+												단 하나의 시술로 얼굴의 균형과 볼륨을 섬세하게 되살립니다.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="caption">
+											<div class="h3">리쥬란 시술</div>
+											<div class="bg">
+												<div class="bg_in" style="background-image: url(img/pn25.png);"></div>
+											</div>
+											<p>미소핀의 리쥬란 시술은 손상된 피부의 재생력을 끌어올려
+												건강하고 생기 있는 피부로 회복시켜 드립니다.
+												민감성 피부부터 노화 피부까지, 피부 상태에 맞춘 맞춤형 솔루션을 제공합니다.</p>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="caption">
+											<div class="h3">코레지 시술</div>
+											<div class="bg">
+												<div class="bg_in" style="background-image: url(img/pn26.png);"></div>
+											</div>
+											<p>탄력 개선과 윤곽 리프팅을 동시에!
+												미소핀의 코레지 시술은 피부 깊숙이 작용하여
+												자연스럽고 또렷한 얼굴선을 선사합니다.</p>
+										</div>
+									</div>
+								</div>
+								<div class="pfo_nav">
+									<div class="pfo_prev swiper-button-prev"><span></span></div>
+									<div class="pfo_next swiper-button-next"><span></span></div>
+								</div>
+							</div>
+						</div>
+						<div class="txt_lnk">
+							<a href="services.html" class="t_lnk lnk_rtt">더보기</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="choose_gift_coupon">
+					<div class="gift_card">
+						<a href="#">
+							<span class="gc gc01">
+								<img src="img/cd01.png" width="348" height="479" alt="">
+							</span>
+							<span class="gc gc02">
+								<img src="img/cd02.png" width="348" height="479" alt="">
+							</span>
+						</a>
+					</div>
+					<div class="choose_gift_coupon_in"></div>
+					<div class="gf_ttl">
+						<div class="h2 h2m t_split">
+							지친 나에게 주는
+							<span class="br">완벽한 선물</span>
+						</div>
+						<div class="txt t_split_up">
+							지속적인 관리를 위한 기프트 카드 또는  
+							<span class="br">수령인이 직접 시술을 선택할 수 있는</span>
+							예치금 카드 중에서 선택하세요.
+						</div>
+						<div class="txt_lnk">
+							<a href="gift-card.html" class="t_lnk lnk_rtt">선택하기</a>
+						</div>
+					</div>
+
+					<div class="leg_revival">
+						<div class="container">
+							<div class="rows">
+								<div class="cols cols01">
+									<div class="j_img01">
+										<!-- <img src="img/j1.jpg" width="399" height="492" alt=""> -->
+										<img src="#" alt="" class="oit oit1">
+										<img src="#" alt="" class="oit oit2l">
+									</div>
+								</div>
+								<div class="cols cols02">
+									<ul class="txt_list">
+										<li>
+											<a href="services-details-5.html">코어톡스</a> 
+											<img src="img/g_DSC08168.jpg" alt="" class="oin oin1">
+											<img src="img/g_DSC08170.jpg" alt="" class="oin oin2">
+											<img src="img/g_DSC08175.jpg" alt="" class="oin oin3">
+										</li>
+										<li>
+											<a href="services-details-7.html">심부볼리프팅</a>
+											<img src="img/g_DSC08179.jpg" alt="" class="oin oin1">
+											<img src="img/g_DSC08181.jpg" alt="" class="oin oin2">
+											<img src="img/g_DSC08195.jpg" alt="" class="oin oin3">
+										</li>
+										<li>
+											<a href="services-details-1.html">팔자주름리프팅</a>
+											<img src="img/g_DSC08197.jpg" alt="" class="oin oin1">
+											<img src="img/g_DSC08197.jpg" alt="" class="oin oin2">
+											<img src="img/g_DSC08208.jpg" alt="" class="oin oin3">
+										</li>
+										<li>
+											<a href="services-details-2.html">타이트닝</a>
+											<img src="img/g_DSC08208.jpg" alt="" class="oin oin1">
+											<img src="img/g_DSC08211.jpg" alt="" class="oin oin2">
+											<img src="img/g_DSC08219.jpg" alt="" class="oin oin3">
+										</li>
+										<li>
+											<a href="services-details-4.html">모공축소</a>
+											<img src="img/g_DSC08219.jpg" alt="" class="oin oin1">
+											<img src="img/g_DSC08229.jpg" alt="" class="oin oin2">
+											<img src="img/g_DSC08224.jpg" alt="" class="oin oin3">
+										</li>
+										<li>
+											<a href="services-details-6.html">페이스리프팅</a>
+											<img src="img/g_DSC08224.jpg" alt="" class="oin oin1">
+											<img src="img/g_DSC08170.jpg" alt="" class="oin oin2">
+											<img src="img/g_DSC08175.jpg" alt="" class="oin oin3">
+										</li>
+									</ul>
+								</div>
+								<div class="cols cols03">
+									<div class="j_img02">
+										<!-- <img src="img/j2.jpg" width="196" height="256" alt=""> -->
+										<img src="#" alt="" class="oit oit2">
+									</div>
+									<div class="j_img03">
+										<!-- <img src="img/j3.jpg" width="298" height="383" alt=""> -->
+										<img src="#" alt="" class="oit oit3">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ya_map">
+
+				    <div class="container">
+
+				        <div class="ya_map_ttl t_split">
+
+				            <a href="https://www.google.com/maps?f=d&saddr&daddr=51.5168216,-0.1373326&ie=UTF8&0&om=0&output=kml" class="txt linkTo1" target="_blank">
+
+				                <div class="q"><img src="img/marker.svg" alt=""></div>
+
+				                <div class="t">지도에서 보기</div> 
+
+				            </a>
+
+				        </div>
+
+				    </div>
+
+				    <div class="ya_map_ovr">
+
+				        <div id="ya_map" style="background-image: url(img/map_img.jpeg) ;"><div class="m_pin"></div></div>
+
+				    </div>
+
+				    <div id="moves_text"></div>	
+
+				</div>
+				<div class="moves_text">
+				    <div class="mt_rows_ovr mt_rows_ovr01">
+				        <div class="ln_m ln_m_top"></div>
+				        <div class="mt_rows_move mt_rows_move01">
+				         
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				    
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                  
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                 
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                    
+				                </div>
+				          
+				            
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                    
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                  
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                   
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                   
+				                </div>
+				           
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                    
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                    
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                    
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">Misopin</div>
+				                    
+				                </div>
+				
+				        </div>
+				        <div class="dsc_top">
+				            <p>첫 방문 특가 이벤트</p>
+				        </div>	
+				        <div class="ln_m ln_m_btm"></div>					
+				    </div>
+				    <div class="mt_rows_ovr mt_rows_ovr02">
+				        <div class="mt_rows_move mt_rows_move02">
+				            
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                 
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				              
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                 
+				                </div>                
+				   
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				             
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                  
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                 
+				                </div>                
+				
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				              
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				                 
+				                </div>
+				                <div class="mt_cols">
+				                    <div class="t">미소핀</div>
+				               
+				                </div>
+				           
+				        </div>
+				        <div class="ln_m ln_m_btm"></div>
+				        <div class="dsc_btm">
+				            <p>미소핀 멤버십 이벤트</p>
+				            <p>모든 시술 최대 25% 할인</p>
+				        </div>					
+				    </div>
+				    <div class="mt_cards">
+			
+				    </div>		
+				</div>
+				
+				<div class="all_stock">
+				    <div class="container">
+				        <a href="blog.html" class="all_stock_lnk lnk_rtt">이벤트 보기</a>
+				    </div>
+				</div>
+				<div class="big_btn">
+				    <div class="container">
+				       
+				    </div>
+				</div>
+				<div id="ff"></div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container">
+				<div class="business_info" style="text-align: center; padding: 20px 0; border-top: 1px solid #ddd; margin-bottom: 20px;">
+					<div class="business_links" style="margin-bottom: 15px;">
+						<a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">비급여항목안내</a> |
+						<a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">개인정보취급방침</a> |
+						<a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">이용약관</a> |
+						<a href="#" style="color: #666; text-decoration: none; margin: 0 10px;">관리자</a>
+					</div>
+					<p style="color: #666; font-size: 13px; margin: 5px 0;">상호 : 미소핀의원　|　대표자 : ㅁㅁㅁ　사업자등록번호 : 123-56-789　|　전화번호 : 02–123-7890</p>
+					<p style="color: #666; font-size: 13px; margin: 5px 0;">주소 : 서울특별시 강남구 테헤란로 미소핀의원</p>
+					<p style="color: #666; font-size: 13px; margin: 5px 0;">© 2025 미소핀의원. ALL RIGHTS RESERVED.</p>
+				</div>
+			</div>
+		</div>  
+		
+				
+	</div>	
+	<div class="left_menu lef_menu_w" style="opacity: 0">
+	    <div class="left_menu_in">
+	        <img src="img/logo.svg" alt="" width="99" height="16" class="lf_logo">
+	        <div class="left_close_m"></div> 
+	        <div class="desc">
+	            <ul class="l_nav">
+	                <li><a href="about.html">소개</a></li>
+	                <!-- <li><a href="services.html">시술안내</a></li> -->
+	                <li><a href="masters.html">의료진</a></li>
+	                <li><a href="gallery.html">갤러리</a></li>
+	                <li><a href="blog.html">블로그</a></li>
+	                <li><a href="#">시술소개</a></li>
+	                <li><a href="#">연락처</a></li>
+	            </ul>
+	            <div class="desc_btm">
+	                <div class="card">
+	                    <a href="gift-card.html" class="card_lnk">
+	                        <span class="t">카드</span>
+	                        <span class="c"></span>
+	                    </a>
+	                </div>
+	            </div>
+	        </div>    
+	    </div>
+	</div>
+	<div id="connect_with_us" class="hides win_popup">
+	    <div class="win_popup_ovr">
+	        <div class="win_popup_in">
+	            <div class="line_pp">
+	                <div class="h3">질문에 답변해</div>
+	                <div class="h3">드립니다</div>
+	            </div>
+	            <div class="blc_pp_wt">
+	                <form action="#" method="post" class="f1">
+	                    <div class="rows rows50">
+	                        <div class="cols cols01">
+	                            <input type="text" required placeholder="이름*" data-parsley-length="[3, 80]" data-parsley-length-message="값은 3에서 80자 사이여야 합니다." data-parsley-pattern="^[а-яА-ЯёЁa-zA-Z ]+$" data-parsley-pattern-message="값은 러시아어 또는 영어 문자를 포함해야 합니다.">
+	                        </div>
+	                        <div class="cols cols02">
+	                            <input type="text" name="PHONE" class="phone" placeholder="전화번호*" required data-parsley-pattern="^[\d\+\-\.\(\)\/\s]*$" data-parsley-pattern-message="값이 올바르지 않습니다."> 
+	                            <input type="text" name="EMAIL" class="email" placeholder="이메일*" required>
+	                        </div>
+	                    </div>
+	                    <div class="rows rows100">
+	                        <div class="iagree">
+	                            <input type="checkbox" name="checkboxGB" id="checkboxGB" class="css-checkbox" checked/>
+	                            <label for="checkboxGB" class="css-label label_ch">개인정보 처리에 동의합니다</a></label>
+	                        </div> 
+	                    </div>  
+	                    <div class="rows rows100">
+	                        <div class="cols">
+	                            <button class="get_go">보내기</button>
+	                        </div>
+	                    </div>
+	                </form>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	
+	 
+
+	<div id="e_win" class="l_popup">
+	    <div class="l_close"></div> 
+	    <div class="l_popup_in">
+	        <div class="desc_ovr active">
+	            <div class="ttl">
+	                <div class="h2">바로 예약</div>
+	                <p>문의를 남겨주시면 담당자가 내용을 확인한 후 빠르게 연락드리겠습니다.</p>
+	            </div>
+	            <div class="desc">
+	                <form action="#" class="f1">
+	                    <div class="rows">
+	                        <div class="cols cols01">
+	                            <div class="t">이름</div>
+	                        </div>
+	                        <div class="cols cols02">
+	                            <input type="text" name="NAME" required placeholder="이름을 입력하세요*" data-parsley-length="[3, 80]" data-parsley-length-message="값은 3에서 80자 사이여야 합니다." data-parsley-pattern="^[a-zA-Z ]+$" data-parsley-pattern-message="값은 영어 문자를 포함해야 합니다.">
+	                        </div>
+	                    </div> 
+	                    <div class="rows">
+	                        <div class="cols cols01">
+	                            <div class="t">이메일 주소</div>
+	                            
+	                        </div>
+	                        <div class="cols cols02">
+	                            <input type="text" name="EMAIL" class="email" placeholder="이메일*" required>
+	                        </div>
+	                    </div>
+	                    <div class="rows">
+	                        <div class="cols cols01">
+	                            <div class="t">휴대폰 번호</div>
+	                            
+	                        </div>
+	                        <div class="cols cols02">
+	                            <input type="text" name="PHONE" class="phone" placeholder="휴대폰 번호를 입력하세요*"> 
+	                        </div>
+	                    </div>
+	                    <p><input id="price_calc_1" type="hidden" name="price_evoucher" value="0" /></p>
+	                    <p><input id="price_calc_2" type="hidden" name="price_giftcard" value="0" /></p>
+	                    <p><input id="tab_name" type="hidden" name="tab_name" value="0" /></p>
+	                    <div class="rows rows_btn">
+	                        <button class="get_go" >
+	                            <span class="t">제출 <span class="a"></span></span>  
+	                        </button>
+	                    </div>
+	                </form>
+	            </div>
+	        </div> 
+	        <div class="desc_ovr ">
+	            <div class="ttl">
+	                <div class="h2">문의해 주셔서<span class="br">감사합니다!</span></div>
+	                <p>곧 연락드리겠습니다.</p>
+	            </div>
+	        </div>   
+	    </div>
+	</div> 
+	
+	
+	
+	
+	
+	<div id="thank_you" class="hides win_popup thank_you">
+	    <div class="line_pp">
+	        <h3>감사합니다!</h3>
+	    </div>
+	    <div class="blc_pp_wt">
+	        <p>문의해 주셔서 감사합니다. 귀하의 요청이 접수되었습니다.</p>
+	        <span>담당자가 영업일 기준 1일 내로 연락드리겠습다.</span>
+	    </div>
+	</div>
+</body>
+
+</html>
