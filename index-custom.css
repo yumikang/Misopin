@@ -293,3 +293,43 @@
         border-radius: 15px;
     }
 }
+
+/* === 헤더 메뉴: 어떤 규칙이 와도 흰색으로 고정 === */
+#header .header_in .main_menu .menu_list > li > a,
+#header .header_in .main_menu .menu_list > li > a:link,
+#header .header_in .main_menu .menu_list > li > a:visited,
+#header .header_in .main_menu .menu_list > li > a:hover,
+#header .header_in .main_menu .menu_list > li > a:active{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;   /* 그라데이션/텍스트필 컬러 무력화 */
+  background:none !important;                /* 배경클립 텍스트 해제 */
+  -webkit-background-clip:border-box !important;
+  background-clip:border-box !important;
+  mix-blend-mode:normal !important;          /* 블렌드모드로 인한 색 반전 방지 */
+  filter:none !important;
+}
+
+/* 메뉴 a 안에 span 등이 있을 경우도 상속 강제 */
+#header .header_in .main_menu .menu_list > li > a *{
+  color:inherit !important;
+  -webkit-text-fill-color:inherit !important;
+}
+
+/* === 우측 버튼들(상담예약 / Card)도 흰색 고정 === */
+#header .book_a_treatment .e_win_lnk.bat_lnk,
+#header .book_a_treatment .e_win_lnk.bat_lnk .t,
+#header .card .card_lnk .t{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+  mix-blend-mode:normal !important;
+}
+
+/* (선택) 모바일 사이드 메뉴까지 통일 */
+.left_menu .l_nav > li > a,
+.left_menu .l_nav > li > a:hover,
+.left_menu .l_nav > li > a:link,
+.left_menu .l_nav > li > a:visited,
+.left_menu .l_nav > li > a:active{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}

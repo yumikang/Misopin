@@ -222,7 +222,7 @@
 .mi-about .ms_bg .desc .d_img {
     width: 420px;
     height: 570px;
-    margin: 0 auto 100px auto !important;  /* 60px → 100px로 더 증가 + !important 추가 */
+    margin: 0 auto 60px auto !important;  /* 60px → 100px로 더 증가 + !important 추가 */
     overflow: hidden;
     border-radius: 0;
     display: block;
@@ -472,8 +472,8 @@
     }
     
     .mi-about .ms_bg .section-header .main-title {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 20px;
+        line-height: 28px;
     }
     
     .mi-about .ms_bg .section-header .subtitle {
